@@ -1,0 +1,147 @@
+/*---------------------*/
+/* Header 
+/*---------------------*/
+.top-block,
+.top-block ul.sf-menu li ul,
+#footer-callout {
+	background: #013558;
+}
+
+#tt-slider-full-width {
+	background: #00294C;
+}
+
+#footer-callout {
+	border-bottom: 1px solid #2E7090;
+}
+
+/* primary color scheme (header / footer background) */
+.header-holder,
+#footer {
+	border-top: 1px solid #4B8CA8;
+	background-color: #013558;
+	background-image: linear-gradient(to bottom, #1E6F92, #013558); /* required first in the list for IE11 */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#1E6F92), to(#013558));
+	background-image: -webkit-linear-gradient(top, #1E6F92, #013558);
+	background-image: -moz-linear-gradient(top, #1E6F92, #013558);
+	background-image: -webkit-linear-gradient(top, #1E6F92, #013558);
+	background-image: -o-linear-gradient(top, #1E6F92, #013558);
+	background-image: ms-linear-gradient(to bottom, #1E6F92, #013558);
+	-pie-background: linear-gradient(to bottom, #1E6F92, #013558);
+}
+
+/* Custom CSS3 Color Stops for different height headers */
+.header-holder.tt-logo-center {
+	background-image: linear-gradient(to bottom, #1E6F92, #013558 84%);
+	-pie-background: linear-gradient(to bottom, #1E6F92, #013558 84%);	
+}
+
+.header-holder.tt-header-holder-tall {
+	background-image: linear-gradient(to bottom, #1E6F92, #013558 50%);
+	-pie-background: linear-gradient(to bottom, #1E6F92, #013558 50%);	
+}
+
+#footer {
+	background-image: linear-gradient(to bottom, #1E6F92, #013558 68%);
+	-pie-background: linear-gradient(to bottom, #1E6F92, #013558 68%);	
+}
+
+.top-block,
+.top-block a,
+#header .toolbar-left li,
+#header .toolbar-right li {
+	color: #99AEB6;
+}
+
+#tt-mobile-menu-button span:after,
+.tt-icon-box span.fa-stack {
+	color: #1E6F92;	
+}
+
+/*---------------------*/
+/* Main Menu
+/*---------------------*/
+#menu-main-nav a span.navi-description,
+/* reset search/404 navi-description so "blog" isn't active */
+.search-header #menu-main-nav li.current_page_parent a span.navi-description,
+.error-header #menu-main-nav li.current_page_parent a span.navi-description {
+	color: #689BB1;
+}
+
+/* dropdown active link color */
+#menu-main-nav .drop ul li.current-menu-item a,
+#menu-main-nav .drop ul li.current-menu-ancestor a,
+#menu-main-nav .drop ul li.current-menu-parent ul li.current-menu-item a,
+#menu-main-nav .drop ul li.current-menu-ancestor ul li.current-menu-ancestor a,
+#menu-main-nav .drop ul li.current-menu-ancestor ul li.current-menu-ancestor ul li.current-menu-item a {
+	color: #6C889D;
+}
+
+/* dropdown menu bg color */
+#menu-main-nav .drop .c,
+#menu-main-nav li.parent:hover,
+.tt-logo-center #menu-main-nav li.parent:first-child:hover,
+#wrapper.tt-uberstyling-enabled #megaMenu ul.megaMenu > li.menu-item.tt-uber-parent:hover,
+#wrapper.tt-uberstyling-enabled #megaMenu ul.megaMenu li.menu-item ul.sub-menu {
+	background: #002F4F;
+}
+
+/* dropdown link:hover bg color */
+#menu-main-nav .drop ul a:hover,
+#menu-main-nav .drop ul li.current-menu-item.hover a,
+#menu-main-nav .drop ul li.parent.hover a,
+#menu-main-nav .drop ul li.parent.hover a:hover,
+#menu-main-nav .drop ul li.hover ul li.hover a,
+#menu-main-nav .drop ul li.hover ul li.hover a:hover,
+#menu-main-nav .drop ul li.current-menu-ancestor.hover a,
+#menu-main-nav .drop ul li.current-menu-ancestor.hover ul a:hover,
+#menu-main-nav .drop ul li.current-menu-ancestor ul li.current-menu-ancestor ul li.current-menu-item a:hover,
+.top-block .top-holder ul.sf-menu li .sub-menu li a:hover,
+#wrapper.tt-uberstyling-enabled .header-area #megaMenu ul li.menu-item.ss-nav-menu-mega ul.sub-menu li.menu-item > a:hover {
+	background: #45677F;
+	color:#FFF;
+}
+
+/* reset dropdown link:hover on non-active items */
+#menu-main-nav .drop ul li.parent.hover ul a,
+#menu-main-nav .drop ul li.hover ul li.hover ul li a,
+#menu-main-nav .drop ul li.current-menu-ancestor.hover ul a {
+	background:none;	
+}
+
+
+/*---------------------*/
+/* Footer
+/*---------------------*/
+#footer_bottom {
+	background: #001E34 url(../images/skins/bg-footer-bottom-political-blue.png) top center repeat-x;
+}
+
+.footer-content a,
+#footer_bottom a,
+#footer .blogroll li,
+#mc_signup .mc_required,
+.mc_required,
+#mc-indicates-required,
+#footer ul.tt-recent-posts li p {
+	color: #6B9AAF;
+}
+
+#footer .blogroll a,
+#footer ul.tt-recent-posts h4 {
+	color: #FFF;
+}
+
+#footer h3 {
+	border-bottom: 1px solid #517F97;
+}
+
+#footer,
+#footer p,
+#footer ul,
+#footer_bottom,
+#footer_bottom p,
+#footer_bottom ul,
+#footer #mc_signup_form label {
+	color: #DDD;
+}
