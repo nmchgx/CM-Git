@@ -1,0 +1,124 @@
+/*---------------------*/
+/* Sliders
+/*---------------------*/
+/* jQuery1 slider + utility bar */
+.jquery1-slider-wrap,
+.tools {
+background-color: #1E6F92;
+background: -webkit-gradient(radial, center center, 0, center center, 460, from(#1E6F92), to(#013558));
+background: -webkit-radial-gradient(circle, #1E6F92, #013558);
+background: -moz-radial-gradient(circle, #1E6F92, #013558);
+background: -ms-radial-gradient(circle, #1E6F92, #013558);
+}
+
+/* IE Image Fallback */
+.ie7 .jquery1-slider-wrap,
+.ie8 .jquery1-slider-wrap,
+.ie9 .jquery1-slider-wrap {
+	background: transparent url(../images/skins/secondary-political-blue/bg-jquery-bnr.png) 0 0 no-repeat;
+}
+
+
+/*---------------------*/
+/* Sub Menus
+/*---------------------*/
+/* horizontal */
+#horizontal_nav ul a:hover,
+#horizontal_nav ul .current_page_item,
+#horizontal_nav.tt-gallery-nav-wrap .active,
+/* tabs */
+.tabset .ui-state-active,
+.tabset .active,
+.tabset a:hover,
+/* wp-page-navi */
+.karma-pages span.current,
+.wp-pagenavi span.current,
+.woocommerce-pagination .current {
+	background:#115578;
+}
+
+/* vertical */
+#sub_nav ul a:hover,
+#sub_nav ul li.current_page_item a,
+#sub_nav.nav_right_sub_nav ul a:hover,
+#sub_nav.nav_right_sub_nav ul li.current_page_item a {
+	background: url(../images/skins/secondary-political-blue/sprite.png) 0px 0px no-repeat;
+}
+
+
+/*---------------------*/
+/* Links / Lists
+/*---------------------*/
+/* links */
+a,
+p a strong,
+.link-top,
+.tt_comment_required,
+ul.tt-recent-posts h4,
+span.required,
+/* lists */
+ul.list li,
+ul.list1 li:before,
+ul.list2 li:before,
+ul.list3 li:before,
+ul.list4 li:before,
+ul.list5 li:before,
+ul.list6 li:before,
+ul.list7 li:before,
+ul.list8 li:before,
+#sidebar ul li:before,
+#sub_nav ul li .sub-menu li:before,
+#sub_nav ul li .sub-menu li .sub-menu li:before,
+#sidebar ul li,
+/* left nav */
+#sub_nav ul li .sub-menu a,
+#sub_nav ul li .sub-menu li.current_page_item a,
+#sub_nav ul ul a,
+#sub_nav ul ul a:hover,
+#sub_nav ul li.current_page_item ul li a,
+#sub_nav ul li.current_page_parent ul li.current_page_item a,
+/* right nav */
+#sub_nav.nav_right_sub_nav ul ul a,
+#sub_nav.nav_right_sub_nav ul ul a:hover,
+#sub_nav.nav_right_sub_nav ul li.current_page_item ul li a,
+#sub_nav.nav_right_sub_nav ul li.current_page_parent ul li.current_page_item a,
+#sub_nav .sub_nav_sidebar .textwidget ul li,
+#sub_nav .sub_nav_sidebar a,
+i.discussion-title,
+#sidebar ul.social_icons.tt_vector_social_icons a:after,
+#content p.team-member-title {
+	color: #135A7D;
+}
+
+
+/*---------------------*/
+/* Layout
+/*---------------------*/
+.post_comments {
+	box-shadow: 0 0 0 1px #1E6F92, 0 0 0 2px #013558;
+	background-color: #013558;
+	background-image: linear-gradient(to bottom, #013558, #1E6F92); /* required first in the list for IE11 */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#013558), to(#1E6F92));
+	background-image: -webkit-linear-gradient(top, #013558, #1E6F92);
+	background-image: -moz-linear-gradient(top, #013558, #1E6F92);
+	background-image: -webkit-linear-gradient(top, #013558, #1E6F92);
+	background-image: -o-linear-gradient(top, #013558, #1E6F92);
+	background-image: ms-linear-gradient(to bottom, #013558, #1E6F92);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#013558', endColorstr='#1E6F92');
+}
+
+/* IE8 + IE9 do not support CSS3 radial gradient - fallback images provided below */
+.ie8 .tools .frame,
+.ie9 .tools .frame {
+	background: url(../images/skins/secondary-political-blue/bg-tools-c.png) repeat-y;
+}
+
+.ie8 span.tools-top,
+.ie9 span.tools-top {
+	background: url(../images/skins/secondary-political-blue/bg-tools-t.png) no-repeat;
+}
+
+.ie8 span.tools-bottom,
+.ie9 span.tools-bottom {
+	background: url(../images/skins/secondary-political-blue/bg-tools-b.png) no-repeat;
+}
