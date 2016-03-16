@@ -2419,10 +2419,12 @@ background-repeat: repeat-y;
 #sub_nav {
 	float: left;
 	width: 220px;
-	float: left;
-	background-position: 206px 0;
-	padding-bottom: 65px;
+	height: 100%;
+	background-position: 220px 0;
+	background-color: #eeeeee;
+	padding-bottom: inherit;
 	overflow: hidden;
+	background-attachment: fixed;
 }
 
 #sub_nav ul a {
@@ -2432,6 +2434,7 @@ background-repeat: repeat-y;
 	margin: 0 13px 0 0;
 	padding: 4px 0 8px 20px;
 	position: relative;
+	font-size: 14px;
 }
 
 #sub_nav ul a:after {
@@ -7856,7 +7859,7 @@ p {
 
 #footer h3, #menu-main-nav li strong {
 	letter-spacing: 0.7px;
-	font-size: 12.4px;
+	font-size: 18px;
 }
 
 #footer h3 {
@@ -7915,5 +7918,5 @@ p.comment-author-about {
 	padding-top: 130px;
 }
 .text_nbsp{
-	text-indent: 2em;
+	text-indent: 25px;
 }
