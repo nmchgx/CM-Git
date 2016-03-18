@@ -1,7 +1,19 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: nmchgx
- * Date: 16/3/15
- * Time: 下午9:03
+ * User: xt
+ * Date: 2016/3/16
+ * Time: 19:16
  */
+$sql = "SELECT inform_id, time, title, content FROM inform";
+$sqlResult = $mysql->query($sql);
+if(!empty($sqlResult)){
+    foreach($sqlResult as $row=>$rowVal){
+        $result[$row] = $rowVal;
+    }
+    $json = JSON($result);
+    echo $json;
+}
+else{
+    echo "error";
+}

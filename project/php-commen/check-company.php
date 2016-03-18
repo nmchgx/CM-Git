@@ -1,7 +1,20 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: nmchgx
- * Date: 16/3/15
- * Time: 下午8:16
- */
+require "sqlHelper.php";
+require "jsonHelper.php";
+
+$company_id = $_POST['company_id'];
+
+if($company_id){
+    $sql = "SELECT company.check FROM company WHERE company_id = '$company_id'";
+    $result = $mysql->query($sql);
+    $rows = mysql_num_rows( $result );
+    if(rows){
+        echo "success";
+    }
+    else{
+        echo "error";
+    }
+}
+else{
+    echo "error";
+}
