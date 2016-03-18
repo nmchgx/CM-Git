@@ -13,7 +13,6 @@ if(isset($_SESSION['username'])){
     $userID = $_SESSION['userID'];
     $sql = "SELECT project.projectID,project.projectName,project.projectBanner,project.founderID,user_project.userID FROM user_project,project WHERE user_project.userID='$userID' AND user_project.projectID=project.projectID";
     $sqlResult = $mysql->query($sql);
-    $result;
     if(!empty($sqlResult)){
         foreach($sqlResult as $row=>$rowVal){
             $result[$row] = $rowVal;
