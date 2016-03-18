@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+
+<!-- 测试php -->
+<script src="js/jquery-1.12.1.min.js"></script>
+<script>
+    $.ajax({
+        type: 'GET',
+        url: 'php-common/example.php',
+        success: function (data) {
+            if(data){
+                console.log(data);
+            }else{
+            }
+        }
+    });
+</script>
+
+</html>
