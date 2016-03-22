@@ -12,6 +12,10 @@ $account = $_POST['account'];
 $password = $_POST['password'];
 $type = $_POST['type'];
 
+//echo $account;
+//echo $password;
+//echo $type;
+
 if($account && $password && $type){
     if($type == 'company'){
         $sql = "SELECT * FROM company WHERE account = '$account' and password = '$password'";
@@ -22,13 +26,9 @@ if($account && $password && $type){
                 $_SESSION[$key] = $value;
                 $json[$key] = $value;
             }
-        }
-
-        $rows = mysql_num_rows( $result );
-        if(rows){
             echo "success";
         }
-        else{
+        else {
             echo "error";
         }
     }
@@ -41,15 +41,12 @@ if($account && $password && $type){
                 $_SESSION[$key] = $value;
                 $json[$key] = $value;
             }
-        }
-
-        $rows = mysql_num_rows( $result );
-        if(rows){
             echo "success";
         }
-        else{
+        else {
             echo "error";
         }
+
     }
     else{
         echo "error";
