@@ -21,9 +21,10 @@
             type: "company"
         },
         success: function (data) {
-            if(data){
-                console.log(data);
-            }else{
+            console.log(data.trim());
+            if (data.trim() != "") {
+                var json = JSON.parse(data.trim());
+                console.log(json.msg);
             }
         }
     });
