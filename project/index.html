@@ -13,8 +13,13 @@
 <script src="js/jquery-1.12.1.min.js"></script>
 <script>
     $.ajax({
-        type: 'GET',
-        url: 'php-common/example.php',
+        type: 'POST',
+        url: 'php-common/login.php',
+        data: {
+            account: "11201",
+            password: "123",
+            type: "company"
+        },
         success: function (data) {
             if(data){
                 console.log(data);
