@@ -5,6 +5,8 @@
  * Date: 2016/3/16
  * Time: 19:16
  */
+session_start();
+
 require "sqlHelper.php";
 require "jsonHelper.php";
 
@@ -26,10 +28,10 @@ if($account && $password && $type){
                 $_SESSION[$key] = $value;
                 $json[$key] = $value;
             }
-            echo "success";
+            echo "{\"msg\": \"success\"}";
         }
         else {
-            echo "error";
+            echo "{\"msg\": \"error\"}";
         }
     }
     else if($type == 'province'){
@@ -41,17 +43,17 @@ if($account && $password && $type){
                 $_SESSION[$key] = $value;
                 $json[$key] = $value;
             }
-            echo "success";
+            echo "{\"msg\": \"success\"}";
         }
         else {
-            echo "error";
+            echo "{\"msg\": \"error\"}";
         }
 
     }
     else{
-        echo "error";
+        echo "{\"msg\": \"error\"}";
     }
 }
 else{
-    echo "error";
+    echo "{\"msg\": \"error\"}";
 }
