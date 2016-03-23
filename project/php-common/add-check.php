@@ -5,9 +5,12 @@
  * Date: 2016/3/16
  * Time: 19:16
  */
+session_start();
+
 require "sqlHelper.php";
 require "jsonHelper.php";
-
+//$company_id = '10';
+$company_id = $_SESSION['company_id'];
 $area = $_POST['area'];
 $code = $_POST['code'];
 $name = $_POST['name'];
@@ -21,22 +24,20 @@ $tel = $_POST['tel'];
 $fax = $_POST['fax'];
 $email = $_POST['email'];
 
-$sql = "INSERT INTO company(area,code,name,type,industry,business,contact,address,post,tel,fax,email)
-VALUES ('$area','$code','$name','$type','$industry','$business','$contact','$address','$post','$tel','$fax','$email')";
+$sql = "UPDATE company SET area = '$area', code = '$code', name = '$name', type = '$type', industry = '$industry', business ='$business', contact = '$contact', address = '$address', post = '$post', tel = '$tel', fax = '$fax', email = '$email' WHERE company_id = '$company_id'";
+$result = $mysql->query($sql);
 
-$sql_check_area = "SELECT area From company";
-$result = $mysql->query($sql_check_area);
-if($result != NULL){
-    $sql_check = "UPDATE company SET company.check = 'true'";
-    $sql_check_check = "SELECT company.check From company";
-    $result_check = $mysql->query($sql_check_check);
-    if($result_check){
-        echo "success";
+if(!empty($result)){
+    $sql_check = "UPDATE company SET company.check = 'true' WHERE company_id = '$company_id'";
+    $result_check = $mysql->query($sql_check);
+
+    if(!empty($result_check)){
+        echo "{\"msg\": \"success\"}";
     }
     else{
-        echo "error";
+        echo "{\"msg\": \"error\"}";
     }
 }
 else{
-    echo "error";
+    echo "{\"msg\": \"error\"}";
 }
