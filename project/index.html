@@ -13,8 +13,12 @@
 <script src="js/jquery-1.12.1.min.js"></script>
 <script>
     $.ajax({
-        type: 'GET',
+        type: 'POST',
         url: 'php-common/example.php',
+        data: {
+            pw: "dsafs",
+            sdf: "dsf"
+        },
         success: function (data) {
             if(data){
                 console.log(data);
