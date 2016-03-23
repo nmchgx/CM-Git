@@ -5,16 +5,18 @@
  * Date: 2016/3/18
  * Time: 10:29
  */
+require "sqlHelper.php";
+require "jsonHelper.php";
+
 $title = $_POST['title'];
 $content = $_POST['content'];
 
 $sql = "INSERT INTO inform(title, content) VALUES('$title', '$content')";
+$result = $mysql->query($sql);
 
-$sql_check_reason = "SELECT title From inform";
-$result = $mysql->query($sql_check_reason);
 if(!empty($result)){
-    echo "success";
+    echo "{\"msg\": \"success\"}";
 }
 else{
-    echo "error";
+    echo "{\"msg\": \"error\"}";
 }
