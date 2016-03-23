@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8">
     <script type="text/javascript" src="../js/jquery-1.12.1.min.js"></script>
-    <title>province-sample analysis</title>
+    <title>province-data query</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css" media="all"/>
@@ -78,9 +78,8 @@
     <link rel="stylesheet" href="../css/_internet_explorer.css" media="screen"/>
     <![endif]-->
     <style>
-        .myselect{
-            float: right;
-            margin-bottom: 20px;
+        .myform{
+            width: 100px;
         }
     </style>
     <script src="../js/echarts.common.min.js"></script>
@@ -230,10 +229,10 @@
                     <div class="tools">
                         <span class="tools-top"></span>
                         <div class="frame">
-                            <h1>山东省企业数据采集系统——取样分析</h1>
+                            <h1>山东省企业数据采集系统——数据查询</h1>
 
                             <p class="breadcrumb1"><a href="#">主页</a>
-                               <span class='current_crumb'>取样分析</span>
+                               <span class='current_crumb'>数据查询</span>
                             </p>
                         </div><!-- END frame -->
 
@@ -248,48 +247,60 @@
                 <!-- ***************** - 主内容显示区 - ***************** -->
                 <!-- ////////////////////////////////////////////////////////// -->
                 <div>
-                    <main role="main" id="content" >
+                    <main role="main">
 
                         <!--以下为内容编辑区-->
-
-                        <div class="col-md-offset-4">
-                        <div id="sample analysis" style="height:500px;"></div>
-
-                        <hr>
-                        <div  class="comment-respond">
-                            <h3 id="reply-title" class="comment-reply-title" style="float: left">
-                                <i class="fa fa-pencil-square-o discussion-title"></i>选择所在地区查看企业细节
-                            </h3>
-                            <div class="col-md-4">
-                            <select class="form-control myselect" name="area">
-                                <option>A市</option>
-                                <option>B市</option>
-                                <option>C市</option>
-                                <option>D市</option>
-                                <option>E市</option>
-                            </select>
-                            </div>
-                        </div>
                         <div>
                             <table class="table table-hover">
                                 <thead>
-                                <tr>
-                                    <th>企业编号</th>
-                                    <th>企业名称</th>
-                                    <th>企业位置</th>
+                                <tr class="text-center">
+                                    <th>单位名称</th>
+                                    <th>登录账号</th>
+                                    <th>用户类型</th>
+                                    <th>所属地市</th>
+                                    <th>所属市县</th>
+
+                                    <th>所处区域</th>
+                                    <th>数据状态</th>
+                                    <th>单位性质</th>
+                                    <th>所属行业</th>
+                                    <th>起始日期</th>
+
+                                    <th>结束日期</th>
+                                    <th>统计月份</th>
+                                    <th>统计季度</th>
+
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td id="company_id">1</td>
-                                    <td id="name">某某公司</td>
-                                    <td id="area">A市</td>
+                                <tr class="text-center">
+                                    <td id="name">1</td>
+                                    <td id="account">1</td>
+                                    <td id="type">1</td>
+                                    <td id="area">1</td>
+                                    <td id="??">1</td>
+
+                                    <td id="?1">1</td>
+                                    <td id="?2">1</td>
+                                    <td id="industry">1</td>
+                                    <td id="business">1</td>
+                                    <td id="?3">1</td>
+
+                                    <td id="?4">1</td>
+                                    <td id="data[month]">1</td>
+                                    <td id="?5">1</td>
                                 </tr>
                                 </tbody>
 
                             </table>
                         </div>
+
+                        <div class="col-sm-offset-5 col-sm-10">
+                            <button type="button" href="#" class="btn btn-default">返回</button>
+                            <button type="button"  class="btn btn-success">导出到Excel</button>
                         </div>
+
+
                         <!-- ////////////////////////////////////////////////////////// -->
                         <!-- ***************** -  主内容显示区 END  - ****************** -->
                         <!-- ////////////////////////////////////////////////////////// -->
@@ -418,51 +429,6 @@
 
 
 <!-- ***************** - JavaScript Starts Here - ***************** -->
-<script src="../js/echarts.common.min.js"></script>
-<script type="text/javascript">
-    // 基于准备好的dom，初始化echarts图表
-    var myChart = echarts.init(document.getElementById('sample analysis'));
-
-    option = {
-        title : {
-            text: '全省各市企业数量',
-            x:'center'
-        },
-        tooltip : {
-            trigger: 'item',
-            formatter: "{a} <br/>{b} : {c} ({d}%)"
-        },
-        legend: {
-            orient: 'vertical',
-            left: 'left',
-            data: ['A市','B市','C市','D市','E市']
-        },
-        series : [
-            {
-                name: '各市企业数',
-                type: 'pie',
-                radius : '70%',
-                center: ['50%', '60%'],
-                data:[
-                    {value:20, name:'A市'},
-                    {value:31, name:'B市'},
-                    {value:34, name:'C市'},
-                    {value:13, name:'D市'},
-                    {value:48, name:'E市'}
-                ],
-                itemStyle: {
-                    emphasis: {
-                        shadowBlur: 10,
-                        shadowOffsetX: 0,
-                        shadowColor: 'rgba(0, 0, 0, 0.5)'
-                    }
-                }
-            }
-        ],
-    };
-
-    myChart.setOption(option);
-</script>
 
 <script type="text/javascript" src="../js/custom-main.js"></script>
 <script type="text/javascript" src="../js/superfish.js"></script>
