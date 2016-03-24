@@ -13,18 +13,15 @@
 <script src="js/jquery-1.12.1.min.js"></script>
 <script>
     $.ajax({
-        type: 'POST',
-        url: 'php-common/check-company.php',
+        type: 'GET',
+        url: 'php-common/search-company.php',
         data: {
-            account: "11203",
-            password: "789",
-            type: "company"
+          $search_value: "fasdfs"
         },
         success: function (data) {
-            console.log(data.trim());
-            if (data.trim() != "") {
-                var json = JSON.parse(data.trim());
-                console.log(json.msg);
+            if(data){
+                console.log(data);
+            }else{
             }
         }
     });
