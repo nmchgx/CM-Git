@@ -17,6 +17,7 @@ $check = $_POST['check'];
 $sql = "SELECT company_id, account, city, area, code, company.name,
                company.type, industry, business, contact, address, post, tel, fax,
                email FROM company WHERE company.check = '$check'";
+$sqlResult = $mysql->query($sql);
 
 if(!empty($sqlResult)){
     foreach($sqlResult as $row=>$rowVal){
