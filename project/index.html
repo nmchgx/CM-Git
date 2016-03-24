@@ -14,10 +14,9 @@
 <script>
     $.ajax({
         type: 'POST',
-        url: 'php-common/search-company.php',
+        url: 'php-common/get-company.php',
         data: {
-            search_type:"name",
-            search_value: "美团"
+            check:"fal"
         },
         success: function (data) {
             if(data){
