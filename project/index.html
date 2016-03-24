@@ -14,7 +14,10 @@
 <script>
     $.ajax({
         type: 'GET',
-        url: 'php-common/example.php',
+        url: 'php-common/search-company.php',
+        data: {
+          $search_value: "fasdfs"
+        },
         success: function (data) {
             if(data){
                 console.log(data);
