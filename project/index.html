@@ -13,10 +13,11 @@
 <script src="js/jquery-1.12.1.min.js"></script>
 <script>
     $.ajax({
-        type: 'GET',
+        type: 'POST',
         url: 'php-common/search-company.php',
         data: {
-          $search_value: "fasdfs"
+            search_type:"name",
+            search_value: "美团"
         },
         success: function (data) {
             if(data){
