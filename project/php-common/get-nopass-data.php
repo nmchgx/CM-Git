@@ -11,7 +11,7 @@ require "jsonHelper.php";
 
 $sql = "SELECT data_id, data.time, status, company_id, employment_last, employment_now,
                reason, data.type, first_reason, first_explain, second_reason, second_explain,
-               third_reason, third_explain, schedule_id FROM data";
+               third_reason, third_explain, schedule_id FROM data WHERE status != '通过' or '修改'";
 $sqlResult = $mysql->query($sql);
 
 if(!empty($sqlResult)){
