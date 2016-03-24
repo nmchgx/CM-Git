@@ -14,9 +14,9 @@
 <script>
     $.ajax({
         type: 'POST',
-        url: 'php-common/get-nopass-data.php',
+        url: 'php-common/examine-data.php',
         data: {
-            //check:"fal"
+            company_id:"2",action:"2"
         },
         success: function (data) {
             if(data){
