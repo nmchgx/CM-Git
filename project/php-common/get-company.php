@@ -13,6 +13,7 @@ require "jsonHelper.php";
 
 $check = $_POST['check'];
 
+//根据是否备案来查询
 $sql = "SELECT company_id, account, city, area, code, company.name,
                company.type, industry, business, contact, address, post, tel, fax,
                email FROM company WHERE company.check = '$check'";
