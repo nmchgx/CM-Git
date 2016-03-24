@@ -20,6 +20,7 @@ if($search_type == "city"){
     $sql = "SELECT company_id, account, city, company.check, area, code, company.name,
                company.type, industry, business, contact, address, post, tel, fax,
                email FROM company WHERE city = '$search_value'";
+
     $sqlResult = $mysql->query($sql);
 
     if(!empty($sqlResult)){
@@ -42,7 +43,8 @@ else if($search_type == "name"){
     $search_value = $_POST['search_value'];
     $sql = "SELECT company_id, account, city, company.check, area, code, company.name,
                company.type, industry, business, contact, address, post, tel, fax,
-               email FROM company WHERE company_id = '$search_value'";
+               email FROM company WHERE company.name = '$search_value'";
+
     $sqlResult = $mysql->query($sql);
 
     if(!empty($sqlResult)){
