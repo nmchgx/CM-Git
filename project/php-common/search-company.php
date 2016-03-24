@@ -19,7 +19,7 @@ if($search_type == "city"){
     $search_value = $_POST['search_value'];
     $sql = "SELECT company_id, account, city, company.check, area, code, company.name,
                company.type, industry, business, contact, address, post, tel, fax,
-               email FROM company WHERE city = 'search_value'";
+               email FROM company WHERE city = '$search_value'";
 
     if(!empty($sqlResult)){
         foreach($sqlResult as $row=>$rowVal){
@@ -41,7 +41,7 @@ else if($search_type == "name"){
     $search_value = $_POST['search_value'];
     $sql = "SELECT company_id, account, city, company.check, area, code, company.name,
                company.type, industry, business, contact, address, post, tel, fax,
-               email FROM company WHERE company_id = 'search_value'";
+               email FROM company WHERE company_id = '$search_value'";
 
     if(!empty($sqlResult)){
         foreach($sqlResult as $row=>$rowVal){
