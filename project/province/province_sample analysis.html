@@ -77,12 +77,7 @@
     <!--[if IE]>
     <link rel="stylesheet" href="../css/_internet_explorer.css" media="screen"/>
     <![endif]-->
-    <style>
-        .myselect{
-            float: right;
-            margin-bottom: 20px;
-        }
-    </style>
+
     <script src="../js/echarts.common.min.js"></script>
 </head>
 <body>
@@ -241,9 +236,6 @@
                     </div><!-- END tools -->
                 </div>
 
-
-
-
                 <!-- ////////////////////////////////////////////////////////// -->
                 <!-- ***************** - 主内容显示区 - ***************** -->
                 <!-- ////////////////////////////////////////////////////////// -->
@@ -254,24 +246,26 @@
 
                         <div class="col-md-offset-4">
                         <div id="sample analysis" style="height:500px;"></div>
-
                         <hr>
                         <div  class="comment-respond">
                             <h3 id="reply-title" class="comment-reply-title" style="float: left">
                                 <i class="fa fa-pencil-square-o discussion-title"></i>选择所在地区查看企业细节
                             </h3>
                             <div class="col-md-4">
-                            <select class="form-control myselect" name="area">
-                                <option>A市</option>
-                                <option>B市</option>
-                                <option>C市</option>
-                                <option>D市</option>
-                                <option>E市</option>
-                            </select>
+
+                                    <!--地区选择表单-->
+                                <form action="#" class="form-inline">
+                                    <select class="form-control" name="area">
+                                        <option>A市</option>
+                                        <option>B市</option>
+                                    </select>
+                                    <button type="submit" class="btn btn-default">查询</button>
+                                </form>
+
                             </div>
                         </div>
                         <div>
-                            <table class="table table-hover">
+                            <table class="table table-hover table-bordered">
                                 <thead>
                                 <tr>
                                     <th>企业编号</th>
@@ -443,6 +437,7 @@
                 type: 'pie',
                 radius : '70%',
                 center: ['50%', '60%'],
+//                填数据
                 data:[
                     {value:20, name:'A市'},
                     {value:31, name:'B市'},
@@ -450,6 +445,7 @@
                     {value:13, name:'D市'},
                     {value:48, name:'E市'}
                 ],
+
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
