@@ -18,7 +18,7 @@ $account=$_POST['account'];
 $password=$_POST['password'];
 $city=$_POST['city'];
 //INSERT INTO table_name (列1, 列2,...) VALUES (值1, 值2,....)
-$sql="INSERT INTO company (account,paaword,city) VALUES ('$account','$password','$city')";
+$sql="INSERT INTO company (account,password,city) VALUES ('$account','$password','$city')";
 
 $sqlResult=$mysql->query($sql);
 if(!empty($sqlResult)) {
