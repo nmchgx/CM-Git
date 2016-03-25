@@ -93,7 +93,11 @@
         .mytable tr:hover{
             background-color: #fff;
         }
-        
+        .infor-cell{
+            border-top: 1px solid #FFF;
+            padding: 30px 27px;
+            background:-webkit-linear-gradient(top, #e8e9e7 0%,#f4f4f2 50px);
+        }
     </style>
 
 </head>
@@ -141,14 +145,14 @@
                                         class="navi-description">主页</span></strong></a>
                                 </li>
                                 <li>
-                                    <a href="#"><strong class="text_nbsp"><span 
+                                    <a href="../data-add"><strong class="text_nbsp"><span
                                         class="navi-description">数据填报</span></strong></a>
                                 </li>
-                                <li class="current_page_parent">
-                                    <a href="#"><strong class="text_nbsp"><span
+                                <li>
+                                    <a href="../data-history"><strong class="text_nbsp"><span
                                         class="navi-description">往期数据</span></strong></a>
                                 </li>
-                                <li><a href="#"><strong class="text_nbsp"><span
+                                <li class="current_page_parent"><a href="../inform"><strong class="text_nbsp"><span
                                         class="navi-description">通知</span></strong></a>
                                 </li>
                                 <li><a href="#"><strong class="text_nbsp"><span
@@ -173,10 +177,10 @@
                     <div class="tools">
                         <span class="tools-top"></span>
                         <div class="frame">
-                            <h1 id="data_title">往期数据 2016-01</h1>
+                            <h1>山东省企业数据采集系统——企业版</h1>
 
                             <p class="breadcrumb1"><a href="#">主页</a>
-                               <span class='current_crumb'>往期数据</span>
+                               <span class='current_crumb'>通知</span>
                             </p>
                         </div><!-- END frame -->
 
@@ -194,97 +198,16 @@
 
 
 
-                <main role="main" id="content">
-                <form class="myform">
-                    <table class="mytable">
-                        <tr>
-                            <th>建档期就业人数</th>
-                            <td id="employment_last">
-                                11
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>调查期就业人数</th>
-                            <td id="employment_now">
-                                11
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>其他原因</th>
-                            <td id="reason"> 
-                                原因
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>就业人数减少类型</th>
-                            <td id="type">
-                                关闭破产
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>主要原因</th>
-                            <td id="first_reason">    
-                                产业结构调整
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>主要原因说明</th>
-                            <td id="first_explain">
-                                说明
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>次要原因</th>
-                            <td id="second_reason">
-                                产业结构调整
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>次要原因说明</th>
-                            <td id="second_explain">
-                                说明
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>第三原因</th>
-                            <td id="third_reason">
-                                产业结构调整
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>第三原因说明</th>
-                            <td id="third_explain">
-                                说明
-                            </td>
-                        </tr>
-                        
-                    </table>
-                  </form>
+            <main role="main" id="content">
+               
+                <div class="infor-cell">
+                    <h1 class="infor_title">失业人数创新低</h1>
+                    <p class="infor_time">2016-01-11 01:23:45</p>
+                    <p class="infor_content">在人民群众与政府的鼓励就业政策下，就业比例持续增高，失业率持续走低</p>
+                </div>    
             </main>
             <!-- END main-->
-               
-           <aside role="complementary" id="sidebar" class="right_sidebar">
-               <div class="sidebar-widget">
-                  <h4>当前数据填报</h4>
-                  <div class="textwidget">
-                     <p>请在规定的时间范围内进行填报，填写完成后保存，确认无误后上报。</p>
-                  </div>
-                   <ul class="list list1">
-                        <li><a href="#">进入填报</a></li>
-                    </ul>
-               </div>
-               <div class="sidebar-widget">
-                  <h4>历史数据</h4>
-                  <div class="textwidget">
-                     <ul class="list list1">
-                        <li><a href="#">2012年7月</a></li>
-                        <li><a href="#">2013年1月</a></li>
-                        <li><a href="#">2014年7月</a></li>
-                        <li><a href="#">2015年1月</a></li>
-                     </ul>
-                  </div>
-               </div>
-            </aside><!-- END sidebar -->
+
             </div><!-- END main-area -->
 
             <div id="footer-top">&nbsp;</div>
@@ -440,5 +363,7 @@
         document.documentElement.className+=' ie10';
     }
 </script><!--<![endif]-->
+
+<script type="text/javascript" src="inform.js"></script>
 </body>
 </html>
