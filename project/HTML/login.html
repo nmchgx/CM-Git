@@ -30,6 +30,77 @@
     <link rel="stylesheet" href="../css/_font-awesome.css" type="text/css" media="all" />
     <style>
         @font-face {font-family:Edensfont; src:url("../css/fonts/繁体楷.ttf");}
+        .title_b{
+            background-color:#f4f4f2;
+            height:206px;
+            text-align:center;
+        }
+        .title_s{
+            background-color:#f4f4f2;
+            height:42px;
+        }
+        .title_f{
+            font-family:Edensfont;
+            font-size:60px;
+            color:#053656;
+        }
+        .center_block{
+            background-color:#f4f4f2;
+            height:335px;
+            text-align:center;
+        }
+        .white_block{
+            background-color:#ffffff;
+            width:964.2px;
+            height:323.4px;
+            margin: 0 auto;
+            box-shadow:5px 5px 5px 1px #808080;
+        }
+        .Ecenter_left{
+            float:left;
+            background-color:#ffffff;
+            width:482.01px;
+            height:323.4px;
+        }
+        .Ecenter_left_image{
+            margin-top:15px;
+        }
+        .Ecenter_line{
+            float:left;
+            border-left:1px solid #d3dce5;
+            width:1px;
+            height:290px;
+            margin-top:16.7px;
+        }
+        .Ecenter_right{
+            float:left;
+            background-color:#ffffff;
+            width:481px;
+            height:323.4px;
+        }
+        .Etable{
+            margin-top: 65px;
+            margin-left: 40px;
+        }
+        .Etable th{
+            font-family:Edensfont;
+            font-size:25px;
+            color:#053656;
+        }
+        .Einput{
+             border:1px solid #007db7;
+             width:250px;
+             height:40px;
+             font-size:25px;
+        }
+        .Efont{
+            font-family:Edensfont;
+            font-size:20px;
+            color:#053656;
+        }
+        #Ebutton{
+            margin-right: 110px;width:100px;font-family:Edensfont;font-size:20px; color:#d3dce5;
+        }
     </style>
 
 
@@ -106,49 +177,49 @@
 
 
             <!-- ***************** - 山东省人力资源采集系统 - ***************** -->
-            <div style="background-color:#f4f4f2;height:206px;text-align:center;">
-                <div style="background-color:#f4f4f2;height:42px">
+            <div class="title_b">
+                <div class="title_s">
                 </div>
-                <p style="font-family:Edensfont;font-size:60px;color:#053656;">山东省人力资源采集系统</p>
+                <p class="title_f">山东省人力资源采集系统</p>
             </div>
 
 
             <!-- ***************** - 中间白块块 - ***************** -->
-            <div style="background-color:#f4f4f2;height:335px;text-align:center;">
+            <div class="center_block">
 
-                <div style="background-color:#ffffff;width:964.2px;height:323.4px;margin: 0 auto;box-shadow:5px 5px 5px 1px #808080;">
+                <div class="white_block">
 
                     <!-- ***************** - 左 图片 - ***************** -->
-                    <div style="float:left;background-color:#ffffff;width:482.01px;height:323.4px;">
-                        <img src="../images/login_image.jpg" style="margin-top:15px;"/>
+                    <div class="Ecenter_left">
+                        <img src="../images/login_image.jpg" class="Ecenter_left_image"/>
                     </div>
 
                     <!-- ***************** - 中 竖条 - ***************** -->
-                    <div style="float:left;border-left:1px solid #d3dce5;width:1px;height:290px;margin-top:16.7px;">
+                    <div class="Ecenter_line">
                     </div>
 
                     <!-- ***************** - 右 登录 - ***************** -->
-                    <div style="float:left;background-color:#ffffff;width:481px;height:323.4px;">
+                    <div class="Ecenter_right">
 
-                        <form class="myform" style="margin-top: 65px;margin-left: 40px;">
-                        <table>
+                        <form class="myform" >
+                        <table class="Etable">
                             <tr>
-                                <th style="font-family:Edensfont;font-size:25px;color:#053656;">账号</th>
+                                <th>账号</th>
                                 <td>
-                                    <input style="border:1px solid #007db7;width:250px;height:40px;font-size:25px;" name="account"  required="required"  autofocus="autofocus" />
+                                    <input class="Einput" name="account"  required="required"  autofocus="autofocus" />
                                 </td>
                             </tr>
                             <tr>
-                                <th style="font-family:Edensfont;font-size:25px;color:#053656;">密码</th>
+                                <th>密码</th>
                                 <td>
-                                    <input type="password" style="border:1px solid #007db7;width:250px;height:40px;font-size:25px;" name="password"  required="required" />
+                                    <input type="password" class="Einput" name="password"  required="required" />
                                 </td>
                             </tr>
                             <tr>
-                                <th style="font-family:Edensfont;font-size:25px;color:#053656;">登录类型</th>
+                                <th>登录类型</th>
                                 <td>
                                     <input type="radio" name="type" required="required" checked="checked" />
-                                    <font style="font-family:Edensfont; font-size:20px; color:#053656;">企业
+                                    <font class="Efont">企业
                                     &nbsp;&nbsp;&nbsp;
                                     <input type="radio" name="type" required="required" />省
                                     </font>
@@ -157,7 +228,7 @@
                             <tr>
                                 <th></th>
                                 <td>
-                                    <input style="margin-right: 110px;width:100px;font-family:Edensfont;font-size:20px; color:#d3dce5;" type="button" value="登录" class="ka_button small_button small_royalblue"/>
+                                    <input id="Ebutton" type="button" value="登录" class="ka_button small_button small_royalblue"/>
                                 </td>
                             </tr>
                         </table>
@@ -170,7 +241,6 @@
 
             <!-- ***************** - 下面一条 - ***************** -->
             <div style="background-color:#f4f4f2;height:100px">
-
             </div>
 
 
