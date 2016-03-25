@@ -15,12 +15,12 @@ session_start();
 require "sqlHelper.php";
 require "jsonHelper.php";
 
-$company_id=$_SESSION['company_id'];
+$company_id=$_POST['company_id'];
     //DELETE FROM Person WHERE LastName = 'Wilson'
-$sql="DELETE FROM company WHERE company_id="+company_id;
+$sql="DELETE FROM company WHERE company_id="+$company_id;
 $sqlResult=$mysql->query($sql);
-if($sqlResult){
-    echo 'success';
-}else {
-    echo 'error';
+if(!empty($sqlResult)) {
+    echo "{\"msg\": \"success\"}";
+}else{
+    echo "{\"msg\": \"error\"}";
 }

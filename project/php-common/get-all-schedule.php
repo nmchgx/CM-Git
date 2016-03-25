@@ -15,12 +15,18 @@ require "jsonHelper.php";
 
 $sql = "select * from schedule";
 $sqlResult = $mysql->query($sql);
+$result=null;
+$data=null;
+
 if(!empty($sqlResult)){
     foreach($sqlResult as $row=>$rowVal){
-        $result[$row]=$rowVal;
+        $data[$row]=$rowVal;
     }
+    $result['msg']='success';
+    $result['data']=$data;
+
     $json=JSON($result);
     echo $json;
 }else{
-    echo"error";
+    echo "{\"msg\": \"error\"}";
 }
