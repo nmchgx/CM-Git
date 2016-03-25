@@ -78,8 +78,11 @@
     <link rel="stylesheet" href="../css/_internet_explorer.css" media="screen"/>
     <![endif]-->
     <style>
-        .myform{
-            width: 100px;
+        .table th,.table td{
+            text-align: center;
+        }
+        .table tr:hover{
+            background: #FFFFFF;
         }
     </style>
     <script src="../js/echarts.common.min.js"></script>
@@ -250,44 +253,66 @@
                     <main role="main">
 
                         <!--以下为内容编辑区-->
-                        <div>
-                            <table class="table table-hover">
+                        <div class="col-md-8 col-md-offset-2">
+                            <table class="table table-bordered">
                                 <thead>
-                                <tr class="text-center">
-                                    <th>单位名称</th>
-                                    <th>登录账号</th>
-                                    <th>用户类型</th>
-                                    <th>所属地市</th>
-                                    <th>所属市县</th>
-
-                                    <th>所处区域</th>
-                                    <th>数据状态</th>
-                                    <th>单位性质</th>
-                                    <th>所属行业</th>
-                                    <th>起始日期</th>
-
-                                    <th>结束日期</th>
-                                    <th>统计月份</th>
-                                    <th>统计季度</th>
-
+                                <tr>
+                                    <th class="text-center">属性</th>
+                                    <th class="text-center col-md-8">值</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr class="text-center">
+                                <tr>
+                                    <td>单位名称</td>
                                     <td id="name">1</td>
+                                </tr>
+                                <tr>
+                                    <td>登录账号</td>
                                     <td id="account">1</td>
+                                </tr>
+                                <tr>
+                                    <td>用户类型</td>
                                     <td id="type">1</td>
+                                </tr>
+                                <tr>
+                                    <td>所属地市</td>
                                     <td id="area">1</td>
+                                </tr>
+                                <tr>
+                                    <td>所属市县</td>
                                     <td id="??">1</td>
-
+                                </tr>
+                                <tr>
+                                    <td>所处区域</td>
                                     <td id="?1">1</td>
+                                </tr>
+                                <tr>
+                                    <td>数据状态</td>
                                     <td id="?2">1</td>
+                                </tr>
+                                <tr>
+                                    <td>单位性质</td>
                                     <td id="industry">1</td>
+                                </tr>
+                                <tr>
+                                    <td>所属行业</td>
                                     <td id="business">1</td>
+                                </tr>
+                                <tr>
+                                    <td>起始日期</td>
                                     <td id="?3">1</td>
-
+                                </tr>
+                                <tr>
+                                    <td>结束日期</td>
                                     <td id="?4">1</td>
+                                </tr>
+                                <tr>
+                                    <td>统计月份</td>
                                     <td id="data[month]">1</td>
+                                </tr>
+                                <tr>
+
+                                    <td>统计季度</td>
                                     <td id="?5">1</td>
                                 </tr>
                                 </tbody>

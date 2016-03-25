@@ -78,8 +78,8 @@
     <link rel="stylesheet" href="../css/_internet_explorer.css" media="screen"/>
     <![endif]-->
     <style>
-        .myform{
-            width: 100px;
+        .table tr:hover{
+            background: #FFFFFF;
         }
     </style>
     <script src="../js/echarts.common.min.js"></script>
@@ -254,15 +254,27 @@
 
                         <div class="row" >
                             <div class="col-md-12 col-md-offset-1">
+
+                                <!-----------------查询form----------------->
                                 <form  class="form-inline" action="#">
                                     <div class="form-group">
                                         <label>调查起始日期:</label>
-                                        <input type="text" class="form-control" style="width: 110px" placeholder="2016-01-01" name="data[year]">
+                                        <select name="time" class="form-control">
+                                            <option selected="selected" >调查期--全部</option>
+                                            <option>2016年1月</option>
+                                            <option>2016年2月</option>
+                                        </select>
                                     </div>
+
                                     <div class="form-group">
                                         <label>调查结束日期:</label>
-                                        <input type="email" class="form-control" style="width: 110px" placeholder="2016-02-02" name="data[year]">
+                                        <select name="time" class="form-control">
+                                            <option selected="selected" >调查期--全部</option>
+                                            <option>2016年1月</option>
+                                            <option>2016年2月</option>
+                                        </select>
                                     </div>
+
                                     <div class="form-group">
                                         <label>地区:</label>
                                         <select class="form-control" name="area">
@@ -273,48 +285,51 @@
                                             <option>E市</option>
                                         </select>
                                     </div>
+
                                     <div class="form-group">
                                         <label>企业性质:</label>
                                         <select class="form-control" name="type">
                                             <option>A业</option>
                                             <option>B业</option>
-                                            <option>C业</option>
-                                            <option>D业</option>
-                                            <option>E业</option>
                                         </select>
                                     </div>
+
                                     <div class="form-group">
                                         <label>行业:</label>
                                         <select class="form-control" name="industry">
                                             <option>A业</option>
                                             <option>B业</option>
-                                            <option>C业</option>
-                                            <option>D业</option>
-                                            <option>E业</option>
                                         </select>
                                     </div>
+
                                     <button type="submit" class="btn btn-default">查询</button>
                                 </form>
-                            </div>
+                                <!-----------------查询form----------------->
 
+
+                            </div>
                             <hr>
                             <div id="comparative analysis" class="col-md-offset-1" style="height:600px;width: 800px;"></div>
                         </div>
+                        <hr>
+                        <h3 id="reply-title" class="comment-reply-title col-md-offset-2">
+                            <i class="fa fa-thumb-tack fa-3x" style="font-size:22px;"></i> 岗位变化情况汇总
+                        </h3>
 
                         <div class="col-md-8 col-md-offset-2">
-                            <table class="table table-hover">
+                            <table class="table table-bordered">
                                 <thead>
                                 <tr>
                                     <th></th>
-                                    <th>2016-01-01期</th>
-                                    <th>2016-02-02期</th>
+                                    <th id="time">2016-01-01期</th>
+                                    <th id="time2">2016-02-02期</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <td>企业总数</td>
-                                    <td>100</td>
-                                    <td>100</td>
+                                    <td id="company_sum">100</td>
+                                    <td id="company_sum2">100</td>
                                 </tr>
                                 <tr>
                                     <td>建档期岗位总数</td>
@@ -486,6 +501,7 @@
             trigger: 'axis'
         },
         legend: {
+//            时期名
             data:['1期','2期']
         },
         toolbox: {
@@ -509,41 +525,23 @@
                 formatter: '{value} 个'
             }
         },
+
         series: [
             {
-
+//                开始时期
                 name:'1期',
                 type:'line',
+//                开始时期数据
                 data:[11, 11, 15, 13, 12, 13]
-//                markPoint: {
-//                    data: [
-//                        {type: 'max', name: '最大值'},
-//                        {type: 'min', name: '最小值'}
-//                    ]
-//                },
-//                markLine: {
-//                    data: [
-//                        {type: 'average', name: '平均值'}
-//                    ]
-//                }
             },
             {
+//                结束时期
                 name:'2期',
                 type:'line',
+//                结束时期数据
                 data:[11, 12, 22, 15, 13, 12]
-//                markPoint: {
-//                    data: [
-//                        {name: '周最低', value: -2, xAxis: 1, yAxis: -1.5}
-//                    ]
-//                },
-//                markLine: {
-//                    data: [
-//                        {type: 'average', name: '平均值'}
-//                    ]
-//                }
             }
-        ],
-
+        ]
     };
 
 

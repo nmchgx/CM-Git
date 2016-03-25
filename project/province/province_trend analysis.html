@@ -254,25 +254,37 @@
 
                         <div class="row" >
                             <div class="col-md-12 col-md-offset-1">
+                                <!------------日期选择表单--------------->
                                 <form  class="form-inline" action="#">
-                                    <div class="form-group">
-                                        <label>调查起始日期:</label>
-                                        <input type="text" class="form-control" style="width: 110px" placeholder="2016-01-01" name="data[year]">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>调查结束日期:</label>
-                                        <input type="email" class="form-control" style="width: 110px" placeholder="2016-02-02" name="data[year]">
-                                    </div>
+
+                                    <label>调查起始日期:</label>
+                                    <select name="time" class="form-control">
+                                        <option selected="selected" >调查期--全部</option>
+                                        <option>2016年1月</option>
+                                        <option>2016年2月</option>
+                                    </select>
+
+                                    <label>调查结束日期:</label>
+                                    <select name="time" class="form-control">
+                                        <option selected="selected" >调查期--全部</option>
+                                        <option>2016年1月</option>
+                                        <option>2016年2月</option>
+                                    </select>
+
                                     <button type="submit" class="btn btn-default">查询</button>
                                 </form>
-                            </div>
 
+                            </div>
                             <hr>
+                            <!--图表绘制-->
                             <div id="comparative analysis" class="col-md-offset-1" style="height:600px;width: 800px;"></div>
                         </div>
+                        <h3 id="reply-title" class="comment-reply-title col-md-offset-1">
+                            <i class="fa fa-thumb-tack fa-3x" style="font-size:22px;"></i> 岗位变化数量汇总
+                        </h3>
 
                         <div class="col-md-6 col-md-offset-3">
-                            <table class="table table-hover">
+                            <table class="table table-hover table-bordered">
                                 <thead>
                                 <tr>
                                     <th>时期</th>
@@ -281,29 +293,18 @@
                                 </thead>
                                 <tbody>
                                 <tr>
+                                    <!--时期-->
                                     <td>1月</td>
+                                    <!--岗位变化数-->
                                     <td>100</td>
                                 </tr>
                                 <tr>
-                                    <td>2月</td>
+                                    <!--时期-->
+                                    <td id="month">2月</td>
+                                    <!--岗位变化数-->
                                     <td>100</td>
                                 </tr>
-                                <tr>
-                                    <td>3月</td>
-                                    <td>100</td>
-                                </tr>
-                                <tr>
-                                    <td>4月</td>
-                                    <td>100</td>
-                                </tr>
-                                <tr>
-                                    <td>5月</td>
-                                    <td>100</td>
-                                </tr>
-                                <tr>
-                                    <td>6月</td>
-                                    <td>100</td>
-                                </tr>
+
                                 </tbody>
                             </table>
                         </div>
@@ -339,23 +340,6 @@
                 <div class="footer-content">
 
                     <div class="one_half tt-column">
-                        <!--<h3>Social Networks</h3>-->
-                        <!--<ul class="social_icons tt_vector_social_icons tt_no_social_title tt_image_social_icons">-->
-                        <!--<li><a href="#" class="rss" title="RSS Feed">RSS</a></li>-->
-                        <!--<li><a href="#" class="twitter" title="Twitter">Twitter</a></li>-->
-                        <!--<li><a href="#" class="facebook" title="Facebook">Facebook</a></li>-->
-                        <!--<li><a href="#" class="email" title="Email">Email</a></li>-->
-                        <!--<li><a href="#" class="flickr" title="Flickr">Flickr</a></li>-->
-                        <!--<li><a href="#" class="youtube" title="YouTube">YouTube</a></li>-->
-                        <!--<li><a href="#" class="linkedin" title="LinkedIn">LinkedIn</a></li>-->
-                        <!--<li><a href="#" class="pinterest" title="Pinterest">Pinterest</a></li>-->
-                        <!--<li><a href="#" class="foursquare" title="FourSquare">FourSquare</a></li>-->
-                        <!--<li><a href="#" class="delicious" title="Delicious">Delicious</a></li>-->
-                        <!--<li><a href="#" class="digg" title="Digg">Digg</a></li>-->
-                        <!--<li><a href="#" class="google +" title="Google +">Google+</a></li>-->
-                        <!--<li><a href="#" class="dribbble" title="Dribbble">Dribbble</a></li>-->
-                        <!--<li><a href="#" class="skype" title="Skype">Skype</a></li>-->
-                        <!--</ul>-->
                         <h3>联系我们</h3>
                         <div class="textwidget">
                             <ul class="tt-business-contact">
@@ -465,6 +449,8 @@
             {
                 type : 'category',
                 boundaryGap : false,
+
+//               ----------变化月份-----------
                 data : ['1月','2月','3月','4月','5月','6月','7月']
             }
         ],
@@ -477,8 +463,10 @@
             {
                 name:'岗位变化数',
                 type:'line',
-                stack: '总量',
+                stack: '变化量',
                 areaStyle: {normal: {}},
+
+//                ----------变化数量-----------
                 data:[120, 132, 101, 134, 90, 230, 210]
             }
 
