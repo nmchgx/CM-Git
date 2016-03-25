@@ -14,7 +14,7 @@ session_start();
 require "sqlHelper.php";
 require "jsonHelper.php";
 $schedule_id=$_SESSION['schedule_id'];
-$sql="SELECT * from schedule where schedule_id="+$schedule_id;
+$sql="SELECT * from schedule where schedule_id='$schedule_id'";
 $sqlResult=$mysql->query($sql);
 $result=null;
 $data=null;
