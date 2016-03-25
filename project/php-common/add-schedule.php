@@ -18,7 +18,7 @@ $month=$_POST['month'];
 $start=$_POST['start'];
 $end=$_POST['end'];
 //INSERT INTO table_name (列1, 列2,...) VALUES (值1, 值2,....)
-$sql="INSERT INTO schedule (year,month,start,end) VALUES ("+$year+","+$month+","+$start+","+$end+")";
+$sql="INSERT INTO schedule (year,month,start,end) VALUES ('$year','$month','$start','$end')";
 $sqlResult=$mysql->query($sql);
 if(!empty($sqlResult)) {
     echo "{\"msg\": \"success\"}";

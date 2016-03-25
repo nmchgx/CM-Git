@@ -17,7 +17,7 @@ require "jsonHelper.php";
 
 $company_id=$_POST['company_id'];
     //DELETE FROM Person WHERE LastName = 'Wilson'
-$sql="DELETE FROM company WHERE company_id="+$company_id;
+$sql="DELETE FROM company WHERE company_id='$company_id'";
 $sqlResult=$mysql->query($sql);
 if(!empty($sqlResult)) {
     echo "{\"msg\": \"success\"}";
