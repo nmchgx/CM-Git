@@ -146,11 +146,11 @@
         }
 
 
-        console.log(top_percent);
-        console.log(right_percent);
-        console.log(bottom_percent);
-        console.log(left_percent);
-        console.log("==================");
+        //console.log(top_percent);
+        //console.log(right_percent);
+        //console.log(bottom_percent);
+        //console.log(left_percent);
+        //console.log("==================");
     }
 
     function fireWatch() {
