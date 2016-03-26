@@ -14,15 +14,19 @@
 <script>
     $.ajax({
         type: 'POST',
-        url: 'php-common/example.php',
-        data: {
-            pw: "dsafs",
-            sdf: "dsf"
-        },
+        url: 'php-common/check-online.php',
         success: function (data) {
-            if(data){
-                console.log(data);
-            }else{
+            console.log(data.trim());
+            switch (data.trim()) {
+                case "province":
+                    location.href='province/';
+                    break;
+                case "company":
+                    location.href='company/inform/';
+                    break;
+                case "none":
+                    location.href='login/';
+                    break;
             }
         }
     });

@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8">
     <script type="text/javascript" src="../js/jquery-1.12.1.min.js"></script>
-    <title>login page</title>
+    <title>登录 - 山东省人力资源采集系统</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css" media="all"/>
@@ -224,17 +224,17 @@
                             <tr>
                                 <th>登录类型</th>
                                 <td>
-                                    <input type="radio" name="type" required="required" checked="checked" />
-                                    <font class="Efont">企业
+                                    <input type="radio" name="type" required="required" checked="checked" id="company" value="company"/>
+                                    <label class="Efont" for="company">企业</label>
                                     &nbsp;&nbsp;&nbsp;
-                                    <input type="radio" name="type" required="required" />省
-                                    </font>
+                                    <input type="radio" name="type" required="required" id="province" value="province"/>
+                                    <label class="Efont" for="province">省</label>
                                 </td>
                             </tr>
                             <tr>
                                 <th></th>
                                 <td>
-                                    <input id="Ebutton" type="button" value="登录" class="ka_button small_button small_royalblue"/>
+                                    <input id="Ebutton" type="button" value="登录" class="ka_button small_button small_royalblue" onclick="login()"/>
                                 </td>
                             </tr>
                         </table>
@@ -409,5 +409,7 @@
         document.documentElement.className+=' ie10';
     }
 </script><!--<![endif]-->
+
+<script type="text/javascript" src="login.js"></script>
 </body>
 </html>

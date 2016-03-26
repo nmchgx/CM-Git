@@ -1,9 +1,0 @@
-add-schedule.php
-
-add-company.php
-
-delete-company.php
-
-get-all-schedule.php
-
-get-schedule-data.php
