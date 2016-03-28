@@ -8,7 +8,7 @@
 require "sqlHelper.php";
 require "jsonHelper.php";
 
-$sql = "SELECT inform_id, inform.time, title, content FROM inform";
+$sql = "SELECT inform_id, inform.time, title, content FROM inform ORDER BY inform.time DESC";
 $sqlResult = $mysql->query($sql);
 if(!empty($sqlResult)){
     foreach($sqlResult as $row=>$rowVal){
