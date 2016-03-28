@@ -13,11 +13,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="UTF-8">
-    <script type="text/javascript" src="../js/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript" src="../../../js/jquery-1.12.1.min.js"></script>
     <title>添加通知</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css" type="text/css" media="all"/>
 
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="#" href="#"/>
@@ -26,25 +26,25 @@
     <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans|Lato' rel='stylesheet' type='text/css'>-->
 
     <!-- Primary CSS -->
-    <link rel="stylesheet" href="../css/style.css" type="text/css" media="all"/>
-    <link rel="stylesheet" href="../css/_mobile.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/_mobile.css" type="text/css" media="all"/>
 
     <!-- Color Scheme CSS -->
-    <link rel="stylesheet" href="../css/karma-steel-green.css" type="text/css" media="all"/>
-    <link rel="stylesheet" href="../css/secondary-steel-green.css" type="text/css" media="all"/>
-    <link rel="stylesheet" href="../css/_font-awesome.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/karma-steel-green.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/secondary-steel-green.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/_font-awesome.css" type="text/css" media="all"/>
 
 
     <!--[if IE 9]>
     <style media="screen">
         #footer,
         .header-holder {
-            behavior: url(js/PIE/PIE.htc);
+            behavior: url(../../../js/PIE/PIE.htc);
         }
     </style>
     <![endif]-->
     <!--[if lte IE 8]>
-    <script type='text/javascript' src='../js/html5shiv.js'></script>
+    <script type='text/javascript' src='../../../js/html5shiv.js'></script>
     <style media="screen">
         /* uncomment for IE8 rounded corners
         #menu-main-nav .drop ul a,
@@ -74,12 +74,12 @@
         .opener,
         .callout_button,
         .testimonials {
-            behavior: url(js/PIE/PIE.htc);
+            behavior: url(../../../js/PIE/PIE.htc);
         }
     </style>
     <![endif]-->
     <!--[if IE]>
-    <link rel="stylesheet" href="../css/_internet_explorer.css" media="screen"/>
+    <link rel="stylesheet" href="../../../css/_internet_explorer.css" media="screen"/>
     <![endif]-->
 </head>
 <body>
@@ -103,7 +103,7 @@
                     <!-- ***************** - 右上方分享链接,可不要 - ***************** -->
                     <div class="toolbar-right">
                         <ul>
-                            <li><a href="#">退出登录</a></li>
+                            <li><a href="../../../php-common/logout.php">退出登录</a></li>
                         </ul>
                     </div><!-- END toolbar-right -->
 
@@ -114,7 +114,7 @@
             <div class="header-holder tt-logo-center">
                 <div class="header-overlay">
                     <div class="header-area">
-                        <a href="#l" class="logo"><img src="../images/LOGO.png"
+                        <a href="#l" class="logo"><img src="../../../images/LOGO.png"
                                                        alt="Karma Responsive Web Template" class="tt-retina-logo" width="154" height="57"/></a>
 
 
@@ -184,11 +184,11 @@
                                 </li>
 
                                 <li class="current_page_parent">
-                                    <a href="#"><strong class="text_nbsp"><span
+                                    <a href="../"><strong class="text_nbsp"><span
                                             class="navi-description">通知</span></strong></a>
                                     <ul class="sub-menu">
                                         <li>
-                                            <a href="#"><span>查看通知</span></a>
+                                            <a href="../"><span>查看通知</span></a>
                                         </li>
                                         <li>
                                             <a href="#"><span>发布通知</span></a>
@@ -281,7 +281,7 @@
                                                 <textarea name="content" class="form-control" rows="3"></textarea>
                                             </div>
                                         </div>
-                                        <button class="ka_button medium_button medium_steelgreen"  type="submit" >发布</button><br />
+                                        <input class="ka_button medium_button medium_steelgreen" onclick="addInform()" value="发布"></input><br />
 
                                     </form>
                                 </div>
@@ -408,17 +408,17 @@
 
 
 <!-- ***************** - JavaScript Starts Here - ***************** -->
-<script type="text/javascript" src="../js/custom-main.js"></script>
-<script type="text/javascript" src="../js/superfish.js"></script>
-<script type="text/javascript" src="../js/jquery.flexslider.js"></script>
-<script type="text/javascript" src="../js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="../js/scrollWatch.js"></script>
-<script type="text/javascript" src="../js/jquery.isotope.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.core.min.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.widget.min.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.tabs.min.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.accordion.min.js"></script>
-<script type="text/javascript" src="../js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="../../../js/custom-main.js"></script>
+<script type="text/javascript" src="../../../js/superfish.js"></script>
+<script type="text/javascript" src="../../../js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="../../../js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="../../../js/scrollWatch.js"></script>
+<script type="text/javascript" src="../../../js/jquery.isotope.js"></script>
+<script type="text/javascript" src="../../../js/jquery.ui.core.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery.ui.widget.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery.ui.tabs.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery.ui.accordion.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery.prettyPhoto.js"></script>
 <script>
     jQuery(document).ready(function () {
         jQuery('.tt-parallax-text').fadeIn(1000); //delete this to remove fading content
@@ -444,5 +444,7 @@
         document.documentElement.className += ' ie10';
     }
 </script><!--<![endif]-->
+
+<script type="text/javascript" src="add.js"></script>
 </body>
 </html>

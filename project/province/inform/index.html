@@ -79,7 +79,7 @@
     <![endif]-->
     <style>
         .mytable{
-            
+
             border: 1px #a9c6c9 solid;
         }
         .mytable th, .mytable td{
@@ -92,6 +92,11 @@
         }
         .mytable tr:hover{
             background-color: #fff;
+        }
+        .infor-cell{
+            border-top: 1px solid #FFF;
+            padding: 30px 27px;
+            background:-webkit-linear-gradient(top, #e8e9e7 0%,#f4f4f2 50px);
         }
 
     </style>
@@ -118,7 +123,7 @@
                     <!-- ***************** - 右上方分享链接,可不要 - ***************** -->
                     <div class="toolbar-right">
                         <ul>
-                            <li><a href="#">退出登录</a></li>
+                            <li><a href="../../php-common/logout.php">退出登录</a></li>
                         </ul>
                     </div><!-- END toolbar-right -->
 
@@ -206,7 +211,7 @@
                                             <a href="#"><span>查看通知</span></a>
                                         </li>
                                         <li>
-                                            <a href="#"><span>发布通知</span></a>
+                                            <a href="add/"><span>发布通知</span></a>
                                         </li>
                                     </ul>
                                 </li>
@@ -265,17 +270,13 @@
                         <!--以下为内容编辑区-->
 
                         <div class="row">
-                            <h1 id="infor_title"  class="col-md-offset-0" style="display: inline">失业人数创新低</h1>
-                            <form action="province_inform_alter.html" method="post" style="display: inline">
-                                <input type="hidden" name="inform_id" value="">
-                                <button  class="btn btn-info col-md-offset-1" type="submit">修改此通知</button>
-                            </form>
+                            <h1 class="infor_title"  class="col-md-offset-0" style="display: inline">失业人数创新低</h1>
                             <form action="#" method="post" style="display: inline">
-                                <input type="hidden" name="inform_id" value="">
+                                <input type="hidden" name="inform_id">
                                 <button  class="btn btn-danger" type="submit">删除此通知</button>
                             </form>
-                            <p id="infor_time">2016-01-11 01:23:45</p>
-                            <p id="infor_content">在人民群众与政府的鼓励就业政策下，就业比例持续增高，失业率持续走低</p>
+                            <p class="infor_time">2016-01-11 01:23:45</p>
+                            <p class="infor_content">在人民群众与政府的鼓励就业政策下，就业比例持续增高，失业率持续走低</p>
                         </div>
                         <!-- ////////////////////////////////////////////////////////// -->
                         <!-- ***************** -  主内容显示区 END  - ****************** -->
