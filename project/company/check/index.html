@@ -133,21 +133,21 @@
                         <!-- ***************** - 导航栏菜单 - ***************** -->
                         <nav role="navigation">
                             <ul id="menu-main-nav" class="navbar-nav">
-                                <li><a href="#"><strong class="text_nbsp"><span
+                                <li><a href=""><strong class="text_nbsp"><span
                                         class="navi-description">主页</span></strong></a>
                                 </li>
-                                <li><a href="#"><strong class="text_nbsp"><span
+                                <li><a href="../data-add"><strong class="text_nbsp"><span
                                         class="navi-description">数据填报</span></strong></a>
                                 </li>
-                                <li><a href="#"><strong class="text_nbsp"><span
+                                <li><a href="../data-history"><strong class="text_nbsp"><span
                                         class="navi-description">往期数据</span></strong></a>
                                 </li>
-                                <li><a href="#"><strong class="text_nbsp"><span
+                                <li><a href="../inform"><strong class="text_nbsp"><span
                                         class="navi-description">通知</span></strong></a>
                                 </li>
                                 <li class="current_page_parent">
                                     <a><strong class="text_nbsp"><span
-                                        class="navi-description">备案</span></strong></a>
+                                            class="navi-description">备案</span></strong></a>
                                 </li>
                             </ul>
                         </nav>
@@ -173,7 +173,7 @@
 
 
                             <p class="breadcrumb1"><a href="#">主页</a>
-                               <span class='current_crumb'>备案</span>
+                                <span class='current_crumb'>备案</span>
                             </p>
                         </div><!-- END frame -->
 
@@ -192,166 +192,145 @@
 
 
                 <main role="main" id="content">
-                <form class="myform">
-                    <table>
-                        <tr>
-                            <th>企业所属地区</th>
-                            <td>
-                                <input type="text" name="area"  required="required"  autofocus="autofocus" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>企业机构代码</th>
-                            <td>
-                                <input type="text" name="code"  required="required" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>企业名称</th>
-                            <td>
-                                <input type="text" name="name"  required="required" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>企业性质</th>
-                            <td>
-                                <select name="type">
-                                    <option selected="selected">全民所有制企业</option>
-                                    <option>集体所有制企业</option>
-                                    <option>联营企业</option>
-                                    <option>三资企业</option>
-                                    <option>私营企业</option>
-                                    <option>其他企业</option>
-                                </select>
-                                <select name="type_0">
-                                    <option selected="selected">null</option>
-                                    <option>null</option>
-                                    <option>null</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>所属行业</th>
-                            <td>
-                                <select name="industry">
-                                    <option selected="selected">农、林、牧、渔业</option>
-                                    <option>采矿业</option>
-                                    <option>制造业</option>
-                                    <option>电力、热力、燃气及水的生产和供应业</option>
-                                    <option>环境和公共设施管理业</option>
-                                    <option>建筑业</option>
-                                    <option>交通运输、仓储业和邮政业</option>
-                                    <option>信息传输、计算机服务和软件业</option>
-                                    <option>批发和零售业</option>
-                                    <option>住宿、餐饮业</option>
-                                    <option>金融、保险业</option>
-                                     <option>房地产业</option>
-                                    <option>租赁和商务服务业</option>
-                                    <option>科学研究、技术服务和地质勘查业</option>
-                                    <option>水利、环境和公共设施管理业</option>
-                                    <option>居民服务和其他服务业</option>
-                                    <option>教育</option>
-                                    <option>卫生、社会保障和社会服务业</option>
-                                    <option>文化、体育、娱乐业</option>
-                                    <option>综合（含投资类、主业不明显）</option>
-                                    <option>其它</option>
-                                </select>
-                                <select name="industry_0">
-                                    <option selected="selected">种植业</option>
-                                    <option>养殖业</option>
-                                    <option>饲养业</option>
-                                    <option>林业</option>
-                                    <option>牧业</option>
-                                    <option>捕捞业</option>
-                                    <option>水利业</option>
-                                    <option>其他相关产业</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>主要经营业务</th>
-                            <td>
-                                <input type="text" name="business"  required="required" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>联系人</th>
-                            <td>
-                                <input type="text" name="contact"  required="required" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>联系地址</th>
-                            <td>
-                                <select name="address">
-                                    <option value="0531" selected="selected">济南市</option>
-                                    <option value="0532">青岛市</option>
-                                    <option value="0533">淄博市</option>
-                                    <option value="0534">德州市</option>
-                                    <option value="0535">烟台市</option>
-                                    <option value="0536">潍坊市</option>
-                                    <option value="0537">济宁市</option>
-                                    <option value="0538">泰安市</option>
-                                    <option value="0539">林沂市</option>
-                                    <option value="0530">菏泽市</option>
-                                    <option value="0543">滨州市</option>
-                                    <option value="0546">东营市</option>
-                                    <option value="0631">威海市</option>
-                                    <option value="0632">枣庄市</option>
-                                    <option value="0633">日照市</option>
-                                    <option value="0634">莱芜市</option>
-                                    <option value="0635">聊城市</option>
-                                </select>
-                                <select name="address_0">
-                                    <option selected="selected">一区</option>
-                                    <option>二区</option>
-                                    <option>三区</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                        	<th>邮政编码</th>
-                        	<td>
-                                <input type="text" name="post"  required="required" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>联系电话</th>
-                            <td>
-                                <input type="text" name="tel"  required="required" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>传真</th>
-                            <td>
-                                <input type="text" name="fax"  required="required" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>EMAIL</th>
-                            <td>
-                                <input type="text" name="email"  required="required" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <td>
-                                <input type="button" value="保存" class="ka_button small_button small_royalblue"/>
-                                <input type="button" value="上报" class="ka_button small_button small_royalblue"/>
-                            </td>
-                        </tr>
-                    </table>
-                  </form>
-            </main>
-            <!-- END main-->
+                    <form class="myform">
+                        <table>
+                            <tr>
+                                <th>企业所属地区</th>
+                                <td>
+                                    <select name="area">
+                                        <option value="0531" selected="selected">济南市</option>
+                                        <option value="0532">青岛市</option>
+                                        <option value="0533">淄博市</option>
+                                        <option value="0534">德州市</option>
+                                        <option value="0535">烟台市</option>
+                                        <option value="0536">潍坊市</option>
+                                        <option value="0537">济宁市</option>
+                                        <option value="0538">泰安市</option>
+                                        <option value="0539">林沂市</option>
+                                        <option value="0530">菏泽市</option>
+                                        <option value="0543">滨州市</option>
+                                        <option value="0546">东营市</option>
+                                        <option value="0631">威海市</option>
+                                        <option value="0632">枣庄市</option>
+                                        <option value="0633">日照市</option>
+                                        <option value="0634">莱芜市</option>
+                                        <option value="0635">聊城市</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>企业机构代码</th>
+                                <td>
+                                    <input type="text" name="code"  required="required" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>企业名称</th>
+                                <td>
+                                    <input type="text" name="name"  required="required" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>企业性质</th>
+                                <td>
+                                    <select name="type">
+                                        <option selected="selected">全民所有制企业</option>
+                                        <option>集体所有制企业</option>
+                                        <option>联营企业</option>
+                                        <option>三资企业</option>
+                                        <option>私营企业</option>
+                                        <option>其他企业</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>所属行业</th>
+                                <td>
+                                    <select name="industry">
+                                        <option selected="selected">农、林、牧、渔业</option>
+                                        <option>采矿业</option>
+                                        <option>制造业</option>
+                                        <option>电力、热力、燃气及水的生产和供应业</option>
+                                        <option>环境和公共设施管理业</option>
+                                        <option>建筑业</option>
+                                        <option>交通运输、仓储业和邮政业</option>
+                                        <option>信息传输、计算机服务和软件业</option>
+                                        <option>批发和零售业</option>
+                                        <option>住宿、餐饮业</option>
+                                        <option>金融、保险业</option>
+                                        <option>房地产业</option>
+                                        <option>租赁和商务服务业</option>
+                                        <option>科学研究、技术服务和地质勘查业</option>
+                                        <option>水利、环境和公共设施管理业</option>
+                                        <option>居民服务和其他服务业</option>
+                                        <option>教育</option>
+                                        <option>卫生、社会保障和社会服务业</option>
+                                        <option>文化、体育、娱乐业</option>
+                                        <option>综合（含投资类、主业不明显）</option>
+                                        <option>其它</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>主要经营业务</th>
+                                <td>
+                                    <input type="text" name="business"  required="required" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>联系人</th>
+                                <td>
+                                    <input type="text" name="contact"  required="required" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>联系地址</th>
+                                <td>
+                                    <input type="text" name="address"  required="required" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>邮政编码</th>
+                                <td>
+                                    <input type="text" name="post"  required="required" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>联系电话</th>
+                                <td>
+                                    <input type="text" name="tel"  required="required" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>传真</th>
+                                <td>
+                                    <input type="text" name="fax"  required="required" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>EMAIL</th>
+                                <td>
+                                    <input type="text" name="email"  required="required" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input type="button" value="备案" class="ka_button small_button small_royalblue"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </main>
+                <!-- END main-->
 
-           <aside role="complementary" id="sidebar" class="right_sidebar">
-               <div class="sidebar-widget">
-                  <div class="textwidget">
-                     <p>请按照规定进行备案，填写完成后保存，确认无误后上报。</p>
-                  </div>
-               </div>
-            </aside><!-- END sidebar -->
+                <aside role="complementary" id="sidebar" class="right_sidebar">
+                    <div class="sidebar-widget">
+                        <div class="textwidget">
+                            <p>请按照规定进行备案，填写完成后保存，确认无误后上报。</p>
+                        </div>
+                    </div>
+                </aside><!-- END sidebar -->
             </div><!-- END main-area -->
 
             <div id="footer-top">&nbsp;</div>
@@ -360,7 +339,7 @@
 
 
 
-		<!-- ////////////////////////////////////////////////////////// -->
+        <!-- ////////////////////////////////////////////////////////// -->
         <!-- ***************** - 主内容显示区结束 - ***************** -->
         <!-- ////////////////////////////////////////////////////////// -->
 
