@@ -32,6 +32,7 @@ if(!empty($result)){
     $result_check = $mysql->query($sql_check);
 
     if(!empty($result_check)){
+        $_SESSION['check'] = 'true';
         echo "{\"msg\": \"success\"}";
     }
     else{
