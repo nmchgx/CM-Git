@@ -22,7 +22,10 @@ if(isset($_SESSION['company_id'])){
 ////        echo "{\"msg\": \"success\"}";
 //    }
     if($check == "true") {
-        echo "{\"msg\": \"success\"}";
+        echo "{\"msg\": \"true\"}";
+    }
+    else if($check == "false") {
+        echo "{\"msg\": \"false\"}";
     }
     else {
         echo "{\"msg\": \"error\"}";

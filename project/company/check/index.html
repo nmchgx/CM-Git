@@ -113,7 +113,7 @@
 
                     <div class="toolbar-right">
                         <ul>
-                            <li><a href="#">退出登录</a></li>
+                            <li><a href="../../php-common/logout.php">退出登录</a></li>
                         </ul>
                     </div><!-- END toolbar-right -->
                     <!-- END 最上方快速入口 -->
@@ -188,7 +188,7 @@
                 <!-- ***************** - 主内容显示区 - ***************** -->
                 <!-- ////////////////////////////////////////////////////////// -->
 
-
+                <h1 id="tips">您已经备案成功</h1>
 
 
                 <main role="main" id="content">
@@ -316,7 +316,7 @@
                             <tr>
                                 <th></th>
                                 <td>
-                                    <input type="button" value="备案" class="ka_button small_button small_royalblue"/>
+                                    <input type="button" value="备案" class="ka_button small_button small_royalblue" onclick="addCheck()"/>
                                 </td>
                             </tr>
                         </table>
@@ -493,5 +493,7 @@
         document.documentElement.className+=' ie10';
     }
 </script><!--<![endif]-->
+
+<script type="text/javascript" src="check.js"></script>
 </body>
 </html>
