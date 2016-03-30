@@ -13,7 +13,7 @@
 require "sqlHelper.php";
 require "jsonHelper.php";
 
-$sql = "select * from schedule";
+$sql = "select * from schedule ORDER BY start DESC";
 $sqlResult = $mysql->query($sql);
 $result=null;
 $data=null;
