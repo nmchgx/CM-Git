@@ -190,21 +190,22 @@
                 <!-- ////////////////////////////////////////////////////////// -->
 
 
+                <h1 id="now-schedule"></h1>
 
-
+                <p id="now-status"></p>
                 <main role="main" id="content">
                 <form class="myform">
                     <table>
                         <tr>
                             <th>建档期就业人数</th>
                             <td>
-                                <input type="text" name="employment_last"  required="required"  autofocus="autofocus" />
+                                <input type="number" name="employment_last"  required="required"  autofocus="autofocus" placeholder="请填写数字" onkeyup='this.value=this.value.replace(/\D/gi,"")'/>
                             </td>
                         </tr>
                         <tr>
                             <th>调查期就业人数</th>
                             <td>
-                                <input id="element-wrapper" type="text" name="employment_now"  required="required" />
+                                <input id="element-wrapper" type="number" name="employment_now"  required="required" placeholder="请填写数字" onkeyup='this.value=this.value.replace(/\D/gi,"")'/>
                             </td>
                         </tr>
                         <tr>
@@ -323,8 +324,10 @@
                         <tr>
                             <th></th>
                             <td>
-                                <input type="button" value="保存" class="ka_button small_button small_royalblue"/>
-                                <input type="button" value="上报" class="ka_button small_button small_royalblue"/>
+                                <input type="text" name="status"  required="required"hidden="hidden"/>
+                                <input type="text" name="schedule_id"  required="required"hidden="hidden"/>
+                                <!--<input type="button" value="保存" class="ka_button small_button small_royalblue"/>-->
+                                <input type="button" value="上报" class="ka_button small_button small_royalblue" onclick="addData()"/>
                             </td>
                         </tr>
                     </table>
@@ -332,25 +335,7 @@
             </main>
             <!-- END main-->
                
-           <aside role="complementary" id="sidebar" class="right_sidebar">
-               <div class="sidebar-widget">
-                  <h4>当前数据填报</h4>
-                  <div class="textwidget">
-                     <p>请在规定的时间范围内进行填报，填写完成后保存，确认无误后上报。</p>
-                  </div>
-               </div>
-               <div class="sidebar-widget">
-                  <h4>历史数据</h4>
-                  <div class="textwidget">
-                     <ul class="list list1">
-                        <li><a href="#">2012年7月</a></li>
-                        <li><a href="#">2013年1月</a></li>
-                        <li><a href="#">2014年7月</a></li>
-                        <li><a href="#">2015年1月</a></li>
-                     </ul>
-                  </div>
-               </div>
-            </aside><!-- END sidebar -->
+
             </div><!-- END main-area -->
 
             <div id="footer-top">&nbsp;</div>
@@ -506,5 +491,7 @@
         document.documentElement.className+=' ie10';
     }
 </script><!--<![endif]-->
+
+<script type="text/javascript" src="data-add.js"></script>
 </body>
 </html>
