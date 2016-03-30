@@ -33,6 +33,18 @@ if(!empty($result)){
 
     if(!empty($result_check)){
         $_SESSION['check'] = 'true';
+        $_SESSION['area'] = $area;
+        $_SESSION['code'] = $code;
+        $_SESSION['name'] = $name;
+        $_SESSION['type'] = $type;
+        $_SESSION['industry'] = $industry;
+        $_SESSION['business'] = $business;
+        $_SESSION['contact'] = $contact;
+        $_SESSION['address'] = $address;
+        $_SESSION['post'] = $post;
+        $_SESSION['tel'] = $tel;
+        $_SESSION['fax'] = $fax;
+        $_SESSION['email'] = $email;
         echo "{\"msg\": \"success\"}";
     }
     else{
