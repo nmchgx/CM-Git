@@ -1,0 +1,42 @@
+/**
+ * Created by Dilyar on 16/3/31.
+ */
+$(document).ready(function(){
+});
+
+function addSchedule(){
+    var year = $('input[name=year]').val();
+    var month = $('input[name=month]').val();
+    var start = $('input[name=start]').val();
+    var end = $('input[name=end]').val();
+
+    console.log(start);
+
+    $.ajax(
+        {
+            type: "POST",
+            url: "../../../php-common/add-schedule.php",
+            data: {
+                year: year,
+                month: month,
+                start: start,
+                end: end
+            },
+            success: function (data) {
+                console.log(data.trim());
+                if (data.trim() != "") {
+                    var json = JSON.parse(data.trim());
+                    if (json.msg == "success") {
+                        location.href = "../schedule/"
+                    }
+                    else {
+                        console.log("error: "+data);
+                    }
+                }
+            },
+            error: function (data) {
+                console.log("error: "+data);
+            }
+        }
+    );
+}
