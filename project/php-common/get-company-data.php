@@ -12,7 +12,7 @@ require "jsonHelper.php";
 
 $company_id = $_SESSION['company_id'];
 
-$sql = "SELECT data.schedule_id,schedule.year,schedule.month,data.employment_last,data.employment_now,data.reason,data.type,data.first_reason,data.first_explain,data.second_reason,data.second_explain,data.third_reason,data.third_explain
+$sql = "SELECT data.schedule_id,schedule.year,schedule.month,data.data_id, data.status,data.employment_last,data.employment_now,data.reason,data.type,data.first_reason,data.first_explain,data.second_reason,data.second_explain,data.third_reason,data.third_explain
 FROM data,schedule WHERE data.company_id = '$company_id'AND data.schedule_id = schedule.schedule_id";
 $sqlResult = $mysql->query($sql);
 $result = null;
