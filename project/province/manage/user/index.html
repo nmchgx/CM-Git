@@ -13,11 +13,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="UTF-8">
-    <script type="text/javascript" src="../../js/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript" src="../../../js/jquery-1.12.1.min.js"></script>
     <title>用户管理</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="../../css/bootstrap.min.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css" type="text/css" media="all"/>
 
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="#" href="#"/>
@@ -26,25 +26,25 @@
     <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans|Lato' rel='stylesheet' type='text/css'>-->
 
     <!-- Primary CSS -->
-    <link rel="stylesheet" href="../../css/style.css" type="text/css" media="all"/>
-    <link rel="stylesheet" href="../../css/_mobile.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/_mobile.css" type="text/css" media="all"/>
 
     <!-- Color Scheme CSS -->
-    <link rel="stylesheet" href="../../css/karma-steel-green.css" type="text/css" media="all"/>
-    <link rel="stylesheet" href="../../css/secondary-steel-green.css" type="text/css" media="all"/>
-    <link rel="stylesheet" href="../../css/_font-awesome.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/karma-steel-green.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/secondary-steel-green.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/_font-awesome.css" type="text/css" media="all"/>
 
 
     <!--[if IE 9]>
     <style media="screen">
         #footer,
         .header-holder {
-            behavior: url(js/PIE/PIE.htc);
+            behavior: url(../../../js/PIE/PIE.htc);
         }
     </style>
     <![endif]-->
     <!--[if lte IE 8]>
-    <script type='text/javascript' src='../../js/html5shiv.js'></script>
+    <script type='text/javascript' src='../../../js/html5shiv.js'></script>
     <style media="screen">
         /* uncomment for IE8 rounded corners
         #menu-main-nav .drop ul a,
@@ -74,12 +74,12 @@
         .opener,
         .callout_button,
         .testimonials {
-            behavior: url(js/PIE/PIE.htc);
+            behavior: url(../../../js/PIE/PIE.htc);
         }
     </style>
     <![endif]-->
     <!--[if IE]>
-    <link rel="stylesheet" href="../../css/_internet_explorer.css" media="screen"/>
+    <link rel="stylesheet" href="../../../css/_internet_explorer.css" media="screen"/>
     <![endif]-->
     <style type="text/css">
 
@@ -143,7 +143,7 @@
             <div class="header-holder tt-logo-center">
                 <div class="header-overlay">
                     <div class="header-area">
-                        <a href="#l" class="logo"><img src="../../images/LOGO.png"
+                        <a href="#l" class="logo"><img src="../../../images/LOGO.png"
                                                        alt="Karma Responsive Web Template" class="tt-retina-logo" width="154" height="57"/></a>
 
 
@@ -303,28 +303,27 @@
                         </h3>
 
 
-                    <table class="mytable">
-                      <tr>
-                      	<th>账号</th>
-                      	<th>类型</th>
-                      	<th>操作</th>
-                      </tr>
-				<tr>
-					<td>111</td>
-					<td>企业</td>
-					<td>
-						<a href="#">删除</a>
-                                 </td>
-				</tr>
-				<tr>
-					<td>222</td>
-					<td>省</td>
-				       <td>
-						<a href="#">删除</a>
-                                  </td>
-				</tr>
+                        <table class="mytable">
+                            <tbody>
+                                <tr>
+                                    <th>账号</th>
+                                    <th>密码</th>
+                                    <th>城市编号</th>
+                                    <th>操作</th>
+                                </tr>
+                            </tbody>
+                            <tbody id="user-tbody">
 
-                    </table>
+                                <tr>
+                                    <td>111</td>
+                                    <td>企业</td>
+                                    <td>sdfa</td>
+                                    <td>
+                                        <a href="#">删除</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
 
                     </main>
                     <!-- END main-->
@@ -371,8 +370,7 @@
                             <tr>
                             <th></th>
                             <td>
-                                <input type="button" value="修改" class="ka_button small_button small_royalblue"/>
-                                <input type="button" value="新建" class="ka_button small_button small_royalblue"/>
+                                <input type="button" value="新建账号" class="ka_button small_button small_royalblue" onclick="addUser()"/>
                             </td>
                         </tr>
                          </table>
@@ -501,17 +499,17 @@
 
 
 <!-- ***************** - JavaScript Starts Here - ***************** -->
-<script type="text/javascript" src="../../js/custom-main.js"></script>
-<script type="text/javascript" src="../../js/superfish.js"></script>
-<script type="text/javascript" src="../../js/jquery.flexslider.js"></script>
-<script type="text/javascript" src="../../js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="../../js/scrollWatch.js"></script>
-<script type="text/javascript" src="../../js/jquery.isotope.js"></script>
-<script type="text/javascript" src="../../js/jquery.ui.core.min.js"></script>
-<script type="text/javascript" src="../../js/jquery.ui.widget.min.js"></script>
-<script type="text/javascript" src="../../js/jquery.ui.tabs.min.js"></script>
-<script type="text/javascript" src="../../js/jquery.ui.accordion.min.js"></script>
-<script type="text/javascript" src="../../js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="../../../js/custom-main.js"></script>
+<script type="text/javascript" src="../../../js/superfish.js"></script>
+<script type="text/javascript" src="../../../js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="../../../js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="../../../js/scrollWatch.js"></script>
+<script type="text/javascript" src="../../../js/jquery.isotope.js"></script>
+<script type="text/javascript" src="../../../js/jquery.ui.core.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery.ui.widget.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery.ui.tabs.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery.ui.accordion.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery.prettyPhoto.js"></script>
 <script>
     jQuery(document).ready(function () {
         jQuery('.tt-parallax-text').fadeIn(1000); //delete this to remove fading content
@@ -537,5 +535,6 @@
         document.documentElement.className += ' ie10';
     }
 </script><!--<![endif]-->
+<script type="text/javascript" src="user-manage.js"></script>
 </body>
 </html>

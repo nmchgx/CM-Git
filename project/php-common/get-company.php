@@ -14,7 +14,25 @@ require "jsonHelper.php";
 $check = $_POST['check'];
 
 //根据是否备案来查询
-if($check == "true") {
+if($check == "all") {
+    $sql = "SELECT company_id, account, password, city FROM company";
+    $sqlResult = $mysql->query($sql);
+
+    if (!empty($sqlResult)) {
+        foreach ($sqlResult as $row => $rowVal) {
+            $data[$row] = $rowVal;
+        }
+
+        $result['msg'] = 'success';
+        $result['data'] = $data;
+
+        $json = JSON($result);
+        echo $json;
+    } else {
+        echo "{\"msg\": \"error\"}";
+    }
+}
+else if($check == "true") {
     $sql = "SELECT company_id, account, city, area, code, company.name,
                company.type, industry, business, contact, address, post, tel, fax,
                email FROM company WHERE company.check = '$check'";
@@ -33,7 +51,8 @@ if($check == "true") {
     } else {
         echo "{\"msg\": \"error\"}";
     }
-}else if($check == "false"){
+}
+else if($check == "false"){
     $sql = "SELECT company_id, account, city, area, code, company.name,
                company.type, industry, business, contact, address, post, tel, fax,
                email FROM company WHERE company.check = '$check'";
