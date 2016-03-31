@@ -5,10 +5,12 @@ $(document).ready(function(){
     getData();
 });
 
+var history_data = null;
+
 function getData(){
     $.ajax({
         type: "POST",
-        url: "../../php-common/get-inform.php",
+        url: "../../php-common/get-company-data.php",
         data:{
         },
         success: function (data) {
@@ -17,7 +19,7 @@ function getData(){
                 var json = JSON.parse(data.trim());
                 if (json.msg == "success") {
                     console.log(json.data);
-                    //fillInform(json.data);
+                    fillDataList(json.data);
                 }
                 else {
                     console.log("error: "+data);
@@ -30,25 +32,52 @@ function getData(){
     });
 }
 
-function fillData (data) {
-    var inforHolder = "<div class='infor-cell'>\
-                    <h1 class='infor_title'></h1>\
-                    <p class='infor_time'></p>\
-                    <p class='infor_content'></p>\
-                </div>";
-    var container = $('#content');
+function fillDataList (data) {
+    history_data = data;
+    
+    var listHolder = "<li>\
+                        <a href='javascript:void(0);'>\
+                        </a>\
+                      </li>";
+
+    var container = $('#list-data');
     container.empty();
 
+    var addShowListener = function (i) {
+        return function () {
+            fillData (i);
+        }
+    }
+
     for(var i = 0; i< data.length; i++){
-        var holder = $(inforHolder);
+        var holder = $(listHolder);
         holder.css('display','none');
         container.append(holder);
 
-        holder.addClass('infor'+i);
-        holder.children('.infor_title').html(data[i].title);
-        holder.children('.infor_time').html(data[i].time);
-        holder.children('.infor_content').html(data[i].content);
+        holder.children('a').click(addShowListener(i));
+        if (i == 0) {
+            holder.children('a').click();
+        }
+        holder.children('a').html(history_data[i].year + "年" + history_data[i].month + "月-" + history_data[i].status);
         holder.fadeIn(600);
-
     }
+
+
+}
+
+function fillData (i) {
+    $("#data_title").html("往期数据 " + history_data[i].year + "年" + history_data[i].month + "月-" + history_data[i].status);
+
+    $("#employment_last").html(history_data[i].employment_last);
+    $("#employment_now").html(history_data[i].employment_now);
+    $("#reason").html(history_data[i].reason);
+    $("#type").html(history_data[i].type);
+    $("#first_reason").html(history_data[i].first_reason);
+    $("#first_explain").html(history_data[i].first_explain);
+    $("#second_reason").html(history_data[i].second_reason);
+    $("#second_explain").html(history_data[i].second_explain);
+    $("#third_reason").html(history_data[i].third_reason);
+    $("#third_explain").html(history_data[i].third_explain);
+    $("#schedule_id").html(history_data[i].schedule_id);
+    $("#status").html(history_data[i].status);
 }
