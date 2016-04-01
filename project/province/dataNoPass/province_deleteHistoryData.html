@@ -95,16 +95,7 @@
         .mytable th{
             width: 300px;
         }
-        .mytable tr:hover{
-            background-color: #fff;
-        }
         
-        .margin-top{
-            margin-top:20px;
-        }
-        .margin-left{
-            margin-left: 20px;
-        }
     </style>
 </head>
 <body>
@@ -265,12 +256,12 @@
                         <div class="tools">
                             <span class="tools-top"></span>
                             <div class="frame">
-                                <h1>山东省企业数据采集系统--数据修改</h1>
+                                <h1>山东省企业数据采集系统——删除历史数据</h1>
 
                                 <p class="breadcrumb1">
                                     <a href="#">主页</a>
                                     <a href="#">审批</a>
-                                    <span class='current_crumb'>审批本期</span>
+                                    <span class='current_crumb'>删除历史数据</span>
                                 </p>
                             </div><!-- END frame -->
 
@@ -286,149 +277,28 @@
 
                     <main role="main" id="content">
                         <h3 id="reply-title" class="comment-reply-title">
-                            <h2><i class="fa fa-thumb-tack fa-3x" style="font-size:22px;"></i> 阿里巴巴</h2>
+                            <h2><i class="fa fa-thumb-tack fa-3x" style="font-size:22px;"></i>删除历史数据</h2>
                         </h3>
 
-                      
-                        <form class="myform">
-                        <table>
+                        <table class="mytable">
                             <tr>
-                                <th>建档期就业人数</th>
+                                <th>期数</th>
+                                <th>公司名称</th>
+                                <th>处理</th>
+                            </tr>
+                            <tr>
+                                <td id="">2015年12月</td>
+                                <td id="name">阿里巴巴</td>
+                                <td id="data_id" style="display:none;">这是一个隐藏的字段用来传递历史数据的id</td>
                                 <td>
-                                    <input type="text" name="employment_last"  required="required"  autofocus="autofocus" />
+                                    <button class="ka_button medium_button medium_steelgreen"  type="button" >删除</button><br />
                                 </td>
-                            </tr>
-                            <tr>
-                                <th>调查期就业人数</th>
-                                <td>
-                                    <input id="element-wrapper" type="text" name="employment_now"  required="required" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>其他原因</th>
-                                <td>                    
-                                    <input type="text" name="reason"  required="required" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>就业人数减少类型</th>
-                                <td>
-                                    <select name="type">
-                                        <option selected="selected">关闭破产</option>
-                                        <option>停业整顿</option>
-                                        <option>经济性裁员</option>
-                                        <option>业务转移</option>
-                                        <option>自然减员</option>
-                                        <option>正常解除或终止劳动合同</option>
-                                        <option>国际因素变化影响</option>
-                                        <option>自然灾害</option>
-                                        <option>重大事件影响</option>
-                                        <option>其他</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>主要原因</th>
-                                <td>    
-                                    <select name="first_reason">
-                                        <option>产业结构调整</option>
-                                        <option>重大技术改革</option>
-                                        <option>节能减排</option>
-                                        <option>淘汰落后产能</option>
-                                        <option>订单不足</option>
-                                        <option>原材料涨价</option>
-                                        <option>工资、社保等用工成本上升</option>
-                                        <option>自然减员</option>
-                                        <option>经营资金困难</option>
-                                        <option>税收政策变化（包括税负增加或出口退税减少等）</option>
-                                        <option>季节性用工</option>
-                                        <option>自行离职</option>
-                                        <option>工作调动</option>
-                                        <option>企业内部调剂</option>
-                                        <option>劳动关系转移</option>
-                                        <option>劳务派遣</option>
-                                        <option>其他</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>主要原因说明</th>
-                                <td>
-                                    <input type="text" name="first_explain"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>次要原因</th>
-                                <td>
-                                    <select name="second_reason">
-                                        <option>产业结构调整</option>
-                                        <option>重大技术改革</option>
-                                        <option>节能减排</option>
-                                        <option>淘汰落后产能</option>
-                                        <option>订单不足</option>
-                                        <option>原材料涨价</option>
-                                        <option>工资、社保等用工成本上升</option>
-                                        <option>自然减员</option>
-                                        <option>经营资金困难</option>
-                                        <option>税收政策变化（包括税负增加或出口退税减少等）</option>
-                                        <option>季节性用工</option>
-                                        <option>自行离职</option>
-                                        <option>工作调动</option>
-                                        <option>企业内部调剂</option>
-                                        <option>劳动关系转移</option>
-                                        <option>劳务派遣</option>
-                                        <option>其他</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>次要原因说明</th>
-                                <td>
-                                    <input type="text" name="second_explain"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>第三原因</th>
-                                <td>
-                                    <select name="third_reason">
-                                        <option>产业结构调整</option>
-                                        <option>重大技术改革</option>
-                                        <option>节能减排</option>
-                                        <option>淘汰落后产能</option>
-                                        <option>订单不足</option>
-                                        <option>原材料涨价</option>
-                                        <option>工资、社保等用工成本上升</option>
-                                        <option>自然减员</option>
-                                        <option>经营资金困难</option>
-                                        <option>税收政策变化（包括税负增加或出口退税减少等）</option>
-                                        <option>季节性用工</option>
-                                        <option>自行离职</option>
-                                        <option>工作调动</option>
-                                        <option>企业内部调剂</option>
-                                        <option>劳动关系转移</option>
-                                        <option>劳务派遣</option>
-                                        <option>其他</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>第三原因说明</th>
-                                <td>
-                                    <input type="text" name="third_explain"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th></th>
-                                <td>
-                                    <input type="button" value="取消" class="ka_button medium_button medium_yogigreen margin-top"/>
-                                    <input type="button" value="保存修改" class="ka_button medium_button medium_yogigreen margin-top margin-left"/>
-                                </td>
+                                
                             </tr>
                         </table>
-                      </form>
-                    </main>
-                    <!-- END main-->
-                       
+
+                      
+                   
                 </div><!-- END main-area -->
 
             <div id="footer-top">&nbsp;</div>
