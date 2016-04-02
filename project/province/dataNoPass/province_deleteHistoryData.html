@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="UTF-8">
     <script type="text/javascript" src="../../js/jquery-1.12.1.min.js"></script>
-    <title>company - record detail</title>
+    <title>province - delete history data</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../../css/bootstrap.min.css" type="text/css" media="all"/>
@@ -283,13 +283,19 @@
                         <table class="mytable">
                             <tr>
                                 <th>期数</th>
+                                <th>时间</th>
                                 <th>公司名称</th>
                                 <th>处理</th>
                             </tr>
                             <tr>
-                                <td id="">2015年12月</td>
-                                <td id="name">阿里巴巴</td>
                                 <td id="data_id" style="display:none;">这是一个隐藏的字段用来传递历史数据的id</td>
+
+                                <td id="schedule_id"></td>
+                                <td>
+                                    <p id="year" style="display:inline;">2013年</p>
+                                    <p id="month" style="display:inline;">12月</p>
+                                </td>
+                                <td id="name">阿里巴巴</td>
                                 <td>
                                     <button class="ka_button medium_button medium_steelgreen"  type="button" >删除</button><br />
                                 </td>

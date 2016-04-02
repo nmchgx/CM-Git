@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="UTF-8">
     <script type="text/javascript" src="../../js/jquery-1.12.1.min.js"></script>
-    <title>company - record detail</title>
+    <title>province - data summary</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../../css/bootstrap.min.css" type="text/css" media="all"/>
@@ -283,11 +283,20 @@
                         <table class="mytable">
                             <tr>
                                 <th>当前期数</th>
+                                <th>时间</th>
+                                <th>开始时间</th>
+                                <th>结束时间</th>
                                 <th>当前状态</th>
                                 <th>处理</th>
                             </tr>
                             <tr>
-                                <td id="">2015年12月</td>
+                                <td id="schedule_id"></td>
+                                <td>
+                                    <p id="year" style="display:inline;">2013年</p>
+                                    <p id="month" style="display:inline;">12月</p>
+                                </td>
+                                <td id="start"></td>
+                                <td id="end"></td>
                                 <td id="is_report">未上报</td>
                                 <td>
                                     <button class="ka_button medium_button medium_steelgreen"  type="button" >上报</button><br />
