@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8">
     <script type="text/javascript" src="../../js/jquery-1.12.1.min.js"></script>
-    <title>company-data history</title>
+    <title>company-inform</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../../css/bootstrap.min.css" type="text/css" media="all"/>
@@ -79,7 +79,7 @@
     <![endif]-->
     <style>
         .mytable{
-            
+
             border: 1px #a9c6c9 solid;
         }
         .mytable th, .mytable td{
@@ -121,6 +121,7 @@
 
                     <div class="toolbar-right">
                         <ul>
+                            <li><a id="welcome">欢迎您，阿里巴巴！</a></li>
                             <li><a href="../../php-common/logout.php">退出登录</a></li>
                         </ul>
                     </div><!-- END toolbar-right -->
@@ -141,8 +142,9 @@
                         <!-- ***************** - 导航栏菜单 - ***************** -->
                         <nav role="navigation">
                             <ul id="menu-main-nav" class="navbar-nav">
-                                <li><a href=""><strong class="text_nbsp"><span
-                                        class="navi-description">主页</span></strong></a>
+                                <li class="current_page_parent">
+                                    <a><strong class="text_nbsp"><span
+                                        class="navi-description">通知</span></strong></a>
                                 </li>
                                 <li>
                                     <a href="../data-add"><strong class="text_nbsp"><span
@@ -151,10 +153,6 @@
                                 <li>
                                     <a href="../data-history"><strong class="text_nbsp"><span
                                         class="navi-description">往期数据</span></strong></a>
-                                </li>
-                                <li class="current_page_parent">
-                                    <a><strong class="text_nbsp"><span
-                                        class="navi-description">通知</span></strong></a>
                                 </li>
                                 <li><a href="../check"><strong class="text_nbsp"><span
                                         class="navi-description">备案</span></strong></a>
@@ -180,7 +178,7 @@
                         <div class="frame">
                             <h1>山东省企业数据采集系统——企业版</h1>
 
-                            <p class="breadcrumb1"><a href="#">主页</a>
+                            <p class="breadcrumb1"><a href="../inform">企业</a>
                                <span class='current_crumb'>通知</span>
                             </p>
                         </div><!-- END frame -->
@@ -200,12 +198,12 @@
 
 
             <main role="main" id="content">
-               
+
                 <div class="infor-cell">
                     <h1 class="infor_title">失业人数创新低</h1>
                     <p class="infor_time">2016-01-11 01:23:45</p>
                     <p class="infor_content">在人民群众与政府的鼓励就业政策下，就业比例持续增高，失业率持续走低</p>
-                </div>    
+                </div>
             </main>
             <!-- END main-->
 
