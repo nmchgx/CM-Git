@@ -11,23 +11,23 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8">
-    <script type="text/javascript" src="../js/jquery-1.12.1.min.js"></script>
-    <title>province-inform</title>
+    <script type="text/javascript" src="../../js/jquery-1.12.1.min.js"></script>
+    <title>province - alter inform</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" type="text/css" media="all"/>
 
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="#" href="#" />
 
     <!-- Primary CSS -->
-    <link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="../css/_mobile.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../../css/_mobile.css" type="text/css" media="all" />
 
     <!-- Color Scheme CSS -->
-    <link rel="stylesheet" href="../css/karma-steel-green.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="../css/secondary-steel-green.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="../css/_font-awesome.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../../css/karma-steel-green.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../../css/secondary-steel-green.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../../css/_font-awesome.css" type="text/css" media="all" />
 
 
     <!--[if IE 9]>
@@ -79,7 +79,7 @@
     <![endif]-->
     <style>
         .mytable{
-            
+
             border: 1px #a9c6c9 solid;
         }
         .mytable th, .mytable td{
@@ -129,60 +129,67 @@
             <div class="header-holder tt-logo-center">
                 <div class="header-overlay">
                     <div class="header-area">
-                        <a href="#l" class="logo"><img src="../images/LOGO.png"
+                        <a href="#l" class="logo"><img src="../../images/LOGO.png"
                                                        alt="Karma Responsive Web Template" class="tt-retina-logo" width="154" height="57"/></a>
 
 
                         <!-- ***************** - 导航栏菜单 - ***************** -->
                         <nav role="navigation">
                             <ul id="menu-main-nav" class="navbar-nav">
-                                <li >
+                                <li class="current_page_parent">
                                     <a href="#"><strong class="text_nbsp"><span
-                                            class="navi-description">主页</span></strong></a>
-                                </li>
-                                <li>
-                                    <a href="#"><strong class="text_nbsp"><span
-                                            class="navi-description">查询</span></strong></a>
+                                            class="navi-description">通知</span></strong></a>
                                     <ul class="sub-menu">
-
                                         <li>
-                                            <a href="#"><span>查看企业</span></a>
+                                            <a href="../inform"><span>查看通知</span></a>
                                         </li>
                                         <li>
-                                            <a href="#"><span>查询企业备案</span></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="#"><span>名称</span></a>
-                                                </li>
-                                                <li><a href="#"><span>市</span></a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span>已备案企业</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span>未备案企业</span></a>
-
-                                        </li>
-                                        <li>
-                                            <a href="#"><span>查看往期汇总表</span></a>
+                                            <a href="../inform/add"><span>发布通知</span></a>
                                         </li>
                                     </ul>
                                 </li>
 
+                                <li>
+                                    <a href="#"><strong class="text_nbsp"><span
+                                            class="navi-description">查询</span></strong></a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="#"><span>查看备案</span></a>
+                                            <ul class="sub-menu">
+                                                <li><a href="../search/company"><span>查询企业备案</span></a>
+                                                </li>
+                                                <li><a href="../search/checked"><span>已备案企业</span></a>
+                                                </li>
+                                                <li><a href="../search/unchecked"><span>未备案企业</span></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="../search/history"><span>查看往期汇总表</span></a>
+                                        </li>
+                                    </ul>
+                                  </li>
+
 
                                 <li>
                                     <a href="#"><strong class="text_nbsp"><span
-                                            class="navi-description">审批</span></strong></a>
+                                            class="navi-description">数据</span></strong></a>
                                     <ul class="sub-menu">
                                         <li>
-                                            <a href="#"><span>审批本期</span></a>
+                                            <a href="../data/summary"><span>上报本期汇总表</span></a>
                                         </li>
                                         <li>
-                                            <a href="#"><span>上报本期汇总表</span></a>
+                                            <a href="../data/delete"><span>删除历史数据</span></a>
                                         </li>
-                                        <li>
-                                            <a href="#"><span>删除历史数据</span></a>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#"><strong class="text_nbsp"><span
+                                            class="navi-description">管理</span></strong></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="..\manage\schedule"><span>设置上报时限</span></a></li>
+                                        <li><a href="..\manage\user"><span>管理用户</span></a>
                                         </li>
                                     </ul>
                                 </li>
@@ -194,29 +201,6 @@
                                     <ul class="sub-menu">
                                         <li>
                                             <a href="#"><span>待定</span></a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="current_page_parent">
-                                    <a href="#"><strong class="text_nbsp"><span
-                                            class="navi-description">通知</span></strong></a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="#"><span>查看通知</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span>发布通知</span></a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <a href="#"><strong class="text_nbsp"><span
-                                            class="navi-description">管理</span></strong></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="#"><span>设置上报时限</span></a></li>
-                                        <li><a href="#"><span>管理用户</span></a>
                                         </li>
                                     </ul>
                                 </li>
@@ -244,8 +228,10 @@
                         <div class="frame">
                             <h1>山东省企业数据采集系统——修改通知</h1>
 
-                            <p class="breadcrumb1"><a href="#">主页</a>
-                               <span class='current_crumb'>通知</span>
+                            <p class="breadcrumb1">
+                                <a href="../inform">主页</a>
+                                <a href="#">通知</a>
+                               <span class='current_crumb'>修改通知</span>
                             </p>
                         </div><!-- END frame -->
 
@@ -264,7 +250,7 @@
 
 
             <main role="main" id="content">
-               
+
                 <div class="row">
                     <div  class="comment-respond col-md-offset-2">
                         <h3 id="reply-title" class="comment-reply-title">
@@ -291,12 +277,12 @@
                     <!--</h1>-->
                     <!--<p id="infor_time">2016-01-11 01:23:45</p>-->
                     <!--<p id="infor_content">在人民群众与政府的鼓励就业政策下，就业比例持续增高，失业率持续走低</p>-->
-                </div>    
+                </div>
             </main>
             <!-- END main-->
-               
+
            <aside role="complementary" id="sidebar" class="right_sidebar">
-               
+
                <div class="sidebar-widget">
                   <h4>历史通知</h4>
                   <div class="textwidget">
@@ -428,17 +414,17 @@
 
 
 <!-- ***************** - JavaScript Starts Here - ***************** -->
-<script type="text/javascript" src="../js/custom-main.js"></script>
-<script type="text/javascript" src="../js/superfish.js"></script>
-<script type="text/javascript" src="../js/jquery.flexslider.js"></script>
-<script type="text/javascript" src="../js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="../js/scrollWatch.js"></script>
-<script type="text/javascript" src="../js/jquery.isotope.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.core.min.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.widget.min.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.tabs.min.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.accordion.min.js"></script>
-<script type="text/javascript" src="../js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="../../js/custom-main.js"></script>
+<script type="text/javascript" src="../../js/superfish.js"></script>
+<script type="text/javascript" src="../../js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="../../js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="../../js/scrollWatch.js"></script>
+<script type="text/javascript" src="../../js/jquery.isotope.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.core.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.widget.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.tabs.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.accordion.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.prettyPhoto.js"></script>
 <script>
     jQuery(document).ready(function () {
         jQuery('.tt-parallax-text').fadeIn(1000); //delete this to remove fading content
