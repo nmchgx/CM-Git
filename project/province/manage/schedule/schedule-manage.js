@@ -10,8 +10,6 @@ function addSchedule(){
     var start = $('input[name=start]').val();
     var end = $('input[name=end]').val();
 
-    console.log(start);
-
     $.ajax(
         {
             type: "POST",
