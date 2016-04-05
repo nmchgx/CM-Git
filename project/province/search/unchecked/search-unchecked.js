@@ -2,15 +2,15 @@
  * Created by Dilyar on 16/4/5.
  */
 $(document).ready(function(){
-    getChecked();
+    getUnchecked();
 });
-//调用get-company.php查询已备案企业
-function getChecked(){
+//调用get-company.php查询未备案企业
+function getUnchecked(){
     $.ajax({
         type: "POST",
         url: "../../../php-common/get-company.php",
         data:{
-            check: "true"
+            check: "false"
         },
         success: function (data) {
             console.log(data.trim());
@@ -18,7 +18,7 @@ function getChecked(){
                 var json = JSON.parse(data.trim());
                 if (json.msg == "success") {
                     console.log(json.data);
-                    fillChecked(json.data);
+                    fillUnchecked(json.data);
                 }
                 else {
                     console.log("error: "+data);
@@ -31,8 +31,8 @@ function getChecked(){
     });
 }
 //将查询的数据填入表格
-function fillChecked (data) {
-    var checkedHolder = "<tr>\
+function fillUnchecked (data) {
+    var uncheckedHolder = "<tr>\
                             <td class='company_id'></td>\
                             <td class='name'></td>\
                             <td class='account'></td>\
@@ -49,11 +49,11 @@ function fillChecked (data) {
                             <td class='fax'></td>\
                             <td class='email'></td>\
                         </tr>";
-    var container = $('#check-tbody');
+    var container = $('#uncheck-tbody');
     container.empty();
 
     for(var i = 0; i< data.length; i++){
-        var holder = $(checkedHolder);
+        var holder = $(uncheckedHolder);
         holder.css('display','none');
         container.append(holder);
 
