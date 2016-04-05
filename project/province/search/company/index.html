@@ -294,13 +294,20 @@
                                         </select>
 
                                         <input name="search_value" type="text"/>
-
-                                        <button class="ka_button medium_button medium_steelgreen"  type="button" >搜索</button>
+                                        </tr>
+                                        <!--搜索按钮点击事件-->
+                                        <tr>
+                                            <th></th>
+                                            <td>
+                                                <input type="button" value="搜索" class="ka_button medium_button medium_steelgreen" onclick="getCompany()"/>
+                                            </td>
+                                        </tr>
                                         <br />
                                     </form>
 
                                     <!--搜索结果显示-->
                                     <table id="table_company_list">
+                                        <tbody>
                                         <tr>
                                             <th>公司id</th>
                                             <th>公司名称</th>
@@ -319,24 +326,9 @@
                                             <th>传真</th>
                                             <th>Email</th>
                                         </tr>
-                                        <tr>
-                                            <td id="company_id"></td>
-                                            <td id="name"></td>
-                                            <td id="account"></td>
-                                            <td id="city"></td>
-                                            <td id="check"></td>
-                                            <td id="area"></td>
-                                            <td id="code"></td>
-                                            <td id="type"></td>
-                                            <td id="industry"></td>
-                                            <td id="business"></td>
-                                            <td id="contact"></td>
-                                            <td id="address"></td>
-                                            <td id="post"></td>
-                                            <td id="tel"></td>
-                                            <td id="fax"></td>
-                                            <td id="email"></td>
-                                        </tr>
+                                        </tbody>
+                                        <tbody id="company-tbody"></tbody>
+
                                     </table>
 
                                 </div>
@@ -499,5 +491,6 @@
         document.documentElement.className += ' ie10';
     }
 </script><!--<![endif]-->
+<script type="text/javascript" src="search-company.js"></script>
 </body>
 </html>

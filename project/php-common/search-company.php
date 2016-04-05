@@ -14,7 +14,7 @@ require "jsonHelper.php";
 $search_type = $_POST['search_type'];
 
 //判断search_type
-if($search_type == "city"){
+if($search_type == "按城市编号"){
     //若是city类型则根据所在城市进行数据返回
     $search_value = $_POST['search_value'];
     $sql = "SELECT company_id, account, city, company.check, area, code, company.name,
@@ -39,7 +39,7 @@ if($search_type == "city"){
     }
 }
 //若是name类型则根据企业名称进行数据返回
-else if($search_type == "name"){
+else if($search_type == "按企业名称"){
     $search_value = $_POST['search_value'];
     $sql = "SELECT company_id, account, city, company.check, area, code, company.name,
                company.type, industry, business, contact, address, post, tel, fax,
