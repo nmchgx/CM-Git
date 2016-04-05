@@ -13,7 +13,12 @@ if(isset($_SESSION['account'])){
         echo "company";
     }
     else if(isset($_SESSION['province_id'])){
-        echo "province";
+        if(isset($_SESSION['city'])){
+            echo "city";
+        }
+        else {
+            echo "province";
+        }
     }
     else {
         echo "none";

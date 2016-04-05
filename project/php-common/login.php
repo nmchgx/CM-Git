@@ -34,7 +34,7 @@ if($account && $password && $type){
             echo "{\"msg\": \"error\"}";
         }
     }
-    else if($type == 'province'){
+    else if($type == 'province' || $type == 'city'){
         $sql = "SELECT * FROM province WHERE account = '$account' and password = '$password'";
         $result = $mysql->query($sql);
 
