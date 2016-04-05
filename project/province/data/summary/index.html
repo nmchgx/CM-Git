@@ -282,7 +282,7 @@
 
                         <table class="mytable">
                             <tr>
-                                <th>当前期数</th>
+                                <th>当前期号</th>
                                 <th>时间</th>
                                 <th>开始时间</th>
                                 <th>结束时间</th>
@@ -292,15 +292,14 @@
                             <tr>
                                 <td id="schedule_id"></td>
                                 <td>
-                                    <p id="year" style="display:inline;">2013年</p>
-                                    <p id="month" style="display:inline;">12月</p>
+                                    <p id="year" style="display:inline;"></p>
+                                    <p id="month" style="display:inline;"></p>
                                 </td>
                                 <td id="start"></td>
                                 <td id="end"></td>
-                                <td id="is_report">未上报</td>
+                                <td id="is_report"></td>
                                 <td>
-                                    <button class="ka_button medium_button medium_steelgreen"  type="button" >上报</button><br />
-
+                                    <input class="ka_button medium_button medium_steelgreen"  type="button" value="上报" onclick="summarySchedule()" id="send-btn"/><br />
                                 </td>
                             </tr>
                         </table>
@@ -461,5 +460,6 @@
         document.documentElement.className += ' ie10';
     }
 </script><!--<![endif]-->
+<script type="text/javascript" src="summary.js"></script>
 </body>
 </html>

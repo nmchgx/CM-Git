@@ -9,7 +9,7 @@
 require "sqlHelper.php";
 require "jsonHelper.php";
 
-$sql = "SELECT * from schedule ORDER BY start DESC LIMIT 0,1";
+$sql = "SELECT schedule_id, date_format(start,'%Y-%m-%d') as start, date_format(start,'%Y-%m-%d') as end, year, month, is_report from schedule ORDER BY start DESC LIMIT 0,1";
 $sqlResult = $mysql->query($sql);
 $result=null;
 $data=null;

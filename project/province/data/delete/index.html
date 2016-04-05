@@ -281,26 +281,21 @@
                         </h3>
 
                         <table class="mytable">
-                            <tr>
-                                <th>期数</th>
-                                <th>时间</th>
-                                <th>公司名称</th>
-                                <th>处理</th>
-                            </tr>
-                            <tr>
-                                <td id="data_id" style="display:none;">这是一个隐藏的字段用来传递历史数据的id</td>
+                            <tbody>
+                                <tr>
+                                    <th>数据编号</th>
+                                    <th>期号</th>
+                                    <th>时间</th>
+                                    <th>公司名称</th>
+                                    <th>申报状态</th>
+                                    <th>处理</th>
+                                </tr>
+                            </tbody>
 
-                                <td id="schedule_id"></td>
-                                <td>
-                                    <p id="year" style="display:inline;">2013年</p>
-                                    <p id="month" style="display:inline;">12月</p>
-                                </td>
-                                <td id="name">阿里巴巴</td>
-                                <td>
-                                    <button class="ka_button medium_button medium_steelgreen"  type="button" >删除</button><br />
-                                </td>
-                                
-                            </tr>
+                            <tbody id="data-tbody">
+
+                            </tbody>
+
                         </table>
 
                       
@@ -459,5 +454,6 @@
         document.documentElement.className += ' ie10';
     }
 </script><!--<![endif]-->
+<script type="text/javascript" src="data-delete.js"></script>
 </body>
 </html>
