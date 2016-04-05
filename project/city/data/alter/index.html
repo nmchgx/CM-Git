@@ -30,9 +30,9 @@
     <link rel="stylesheet" href="../../../css/_mobile.css" type="text/css" media="all"/>
 
     <!-- Color Scheme CSS -->
-    <link rel="stylesheet" href="../../../css/karma-steel-green.css" type="text/css" media="all"/>
-    <link rel="stylesheet" href="../../../css/secondary-steel-green.css" type="text/css" media="all"/>
-    <link rel="stylesheet" href="../../../css/_font-awesome.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/karma-tuf-green.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../../../css/secondary-tuf-green.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../../../css/_font-awesome.css" type="text/css" media="all" />
 
 
     <!--[if IE 9]>
@@ -44,7 +44,7 @@
     </style>
     <![endif]-->
     <!--[if lte IE 8]>
-    <script type='text/javascript' src='../../js/html5shiv.js'></script>
+    <script type='text/javascript' src='../../../js/html5shiv.js'></script>
     <style media="screen">
         /* uncomment for IE8 rounded corners
         #menu-main-nav .drop ul a,
@@ -119,7 +119,8 @@
                     <div class="toolbar-left">
                         <ul>
                             <li><a href="#">主页</a></li>
-                            <li><a href="#">企业填报入口</a></li>
+                            <li><a href="#">企业入口</a></li>
+                            <li><a href="#">省入口</a></li>
                         </ul>
                     </div>
                     <!-- END 最上方快速入口 -->
@@ -139,7 +140,7 @@
             <div class="header-holder tt-logo-center">
                 <div class="header-overlay">
                     <div class="header-area">
-                        <a href="#l" class="logo"><img src="../../../images/LOGO.png"
+                        <a href="#" class="logo"><img src="../../../images/LOGO.png"
                                                        alt="Karma Responsive Web Template" class="tt-retina-logo" width="154" height="57"/></a>
 
 
@@ -150,86 +151,17 @@
                                     <a href="#"><strong class="text_nbsp"><span
                                             class="navi-description">主页</span></strong></a>
                                 </li>
+
                                 <li>
                                     <a href="#"><strong class="text_nbsp"><span
-                                            class="navi-description">查询</span></strong></a>
-                                    <ul class="sub-menu">
-
-                                        <li>
-                                            <a href="#"><span>查看企业</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span>查询企业备案</span></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="#"><span>名称</span></a>
-                                                </li>
-                                                <li><a href="#"><span>市</span></a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span>已备案企业</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span>未备案企业</span></a>
-
-                                        </li>
-                                        <li>
-                                            <a href="#"><span>查看往期汇总表</span></a>
-                                        </li>
-                                    </ul>
+                                            class="navi-description">查看通知</span></strong></a>
                                 </li>
-
 
                                 <li class="current_page_parent">
                                     <a href="#"><strong class="text_nbsp"><span
-                                            class="navi-description">审批</span></strong></a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="#"><span>审批本期</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span>上报本期汇总表</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span>删除历史数据</span></a>
-                                        </li>
-                                    </ul>
+                                            class="navi-description">审批数据</span></strong></a>
                                 </li>
 
-
-                                <li>
-                                    <a href="#"><strong class="text_nbsp"><span
-                                            class="navi-description">数据分析</span></strong></a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="#"><span>待定</span></a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <a href="#"><strong class="text_nbsp"><span
-                                            class="navi-description">通知</span></strong></a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="#"><span>查看通知</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span>发布通知</span></a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <a href="#"><strong class="text_nbsp"><span
-                                            class="navi-description">管理</span></strong></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="#"><span>设置上报时限</span></a></li>
-                                        <li><a href="#"><span>管理用户</span></a>
-                                        </li>
-                                    </ul>
-                                </li>
                             </ul>
                         </nav>
                         <!--END 导航栏菜单-->
@@ -269,8 +201,7 @@
 
                                 <p class="breadcrumb1">
                                     <a href="#">主页</a>
-                                    <a href="#">审批</a>
-                                    <span class='current_crumb'>审批本期</span>
+                                    <span class='current_crumb'>审批数据</span>
                                 </p>
                             </div><!-- END frame -->
 
@@ -439,14 +370,14 @@
 
         <!-- ***************** - Footer Starts Here - ***************** -->
         <footer role="contentinfo" id="footer">
-            <div id="footer-callout" class="default-callout-link">
-                <div id="footer-callout-content">
-                    <a href="#" class="footer-callout-link">
-                        <p class="footer-callout-heading">超链接区</p>
-                        <p class="footer-callout-text">可作为系统监控入口 </p>
-                    </a>
-                </div><!-- END footer-callout-content -->
-            </div><!-- END footer-callout -->
+            <!--<div id="footer-callout" class="default-callout-link">-->
+                <!--<div id="footer-callout-content">-->
+                    <!--<a href="#" class="footer-callout-link">-->
+                        <!--<p class="footer-callout-heading">超链接区</p>-->
+                        <!--<p class="footer-callout-text">可作为系统监控入口 </p>-->
+                    <!--</a>-->
+                <!--</div>&lt;!&ndash; END footer-callout-content &ndash;&gt;-->
+            <!--</div>&lt;!&ndash; END footer-callout &ndash;&gt;-->
 
             <div class="footer-overlay">
                 <div class="footer-content">
