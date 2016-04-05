@@ -287,40 +287,26 @@
 
                                     <!--搜索结果显示-->
                                     <table id="table_company_list">
-                                        <tr>
-                                            <th>公司id</th>
-                                            <th>公司名称</th>
-                                            <th>公司账号</th>
-                                            <th>城市</th>
-                                            <th>企业所属地区</th>
-                                            <th>企业机构代码</th>
-                                            <th>企业性质</th>
-                                            <th>所属行业</th>
-                                            <th>主要经营业务</th>
-                                            <th>联系人</th>
-                                            <th>联系地址</th>
-                                            <th>邮政编码</th>
-                                            <th>联系电话</th>
-                                            <th>传真</th>
-                                            <th>Email</th>
-                                        </tr>
-                                        <tr>
-                                            <td id="company_id"></td>
-                                            <td id="name"></td>
-                                            <td id="account"></td>
-                                            <td id="city"></td>
-                                            <td id="area"></td>
-                                            <td id="code"></td>
-                                            <td id="type"></td>
-                                            <td id="industry"></td>
-                                            <td id="business"></td>
-                                            <td id="contact"></td>
-                                            <td id="address"></td>
-                                            <td id="post"></td>
-                                            <td id="tel"></td>
-                                            <td id="fax"></td>
-                                            <td id="email"></td>
-                                        </tr>
+                                        <tbody>
+                                            <tr>
+                                                <th>公司id</th>
+                                                <th>公司名称</th>
+                                                <th>公司账号</th>
+                                                <th>城市</th>
+                                                <th>企业所属地区</th>
+                                                <th>企业机构代码</th>
+                                                <th>企业性质</th>
+                                                <th>所属行业</th>
+                                                <th>主要经营业务</th>
+                                                <th>联系人</th>
+                                                <th>联系地址</th>
+                                                <th>邮政编码</th>
+                                                <th>联系电话</th>
+                                                <th>传真</th>
+                                                <th>Email</th>
+                                            </tr>
+                                        </tbody>
+                                        <tbody id="check-tbody"></tbody>
                                     </table>
 
                                 </div>
@@ -483,5 +469,6 @@
         document.documentElement.className += ' ie10';
     }
 </script><!--<![endif]-->
+<script type="text/javascript" src="search-checked.js"></script>
 </body>
 </html>
