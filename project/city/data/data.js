@@ -66,7 +66,7 @@ function fillDataList (data) {
 }
 
 function fillData (i) {
-    $("#name").html(history_data[i].name);
+    $("#name").html(history_data[i].name+" - "+history_data[i].status);
     $("#company_id").html(history_data[i].company_id);
 
     $("#employment_last").html(history_data[i].employment_last);
