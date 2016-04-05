@@ -86,7 +86,7 @@
             width: 150px;
             font-size: 28px;
             margin: 10px;
-            
+
         }
         #from_record_search button{
             width: 80px;
@@ -151,49 +151,61 @@
                         <!-- ***************** - 导航栏菜单 - ***************** -->
                         <nav role="navigation">
                             <ul id="menu-main-nav" class="navbar-nav">
-                                <li >
+                                <ul id="menu-main-nav" class="navbar-nav">
+                                   <li>
                                     <a href="#"><strong class="text_nbsp"><span
-                                            class="navi-description">主页</span></strong></a>
-                                </li>
-                                <li class="current_page_parent">
-                                    <a href="#"><strong class="text_nbsp"><span
-                                            class="navi-description">查询</span></strong></a>
+                                            class="navi-description">通知</span></strong></a>
                                     <ul class="sub-menu">
-
                                         <li>
-                                            <a href="#"><span>查看企业</span></a>
-                                        </li>
-                                        
-                                        <li>
-                                            <a href="#"><span>查看备案</span></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="#"><span>查询企业备案</span></a>
-                                                </li>
-                                                <li><a href="#"><span>已备案企业</span></a>
-                                                </li>
-                                                <li><a href="#"><span>未备案企业</span></a>
-                                                </li>
-                                            </ul>
+                                            <a href="../../inform"><span>查看通知</span></a>
                                         </li>
                                         <li>
-                                            <a href="#"><span>查看往期汇总表</span></a>
+                                            <a href="../../inform/add"><span>发布通知</span></a>
                                         </li>
                                     </ul>
                                 </li>
 
+                                <li class="current_page_parent">
+                                    <a href="#"><strong class="text_nbsp"><span
+                                            class="navi-description">查询</span></strong></a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="#"><span>查看备案</span></a>
+                                            <ul class="sub-menu">
+                                                <li><a href="../../search/company"><span>查询企业备案</span></a>
+                                                </li>
+                                                <li><a href="../../search/checked"><span>已备案企业</span></a>
+                                                </li>
+                                                <li><a href="../../search/unchecked"><span>未备案企业</span></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="../../search/history"><span>查看往期汇总表</span></a>
+                                        </li>
+                                    </ul>
+                                  </li>
+
 
                                 <li>
                                     <a href="#"><strong class="text_nbsp"><span
-                                            class="navi-description">审批</span></strong></a>
+                                            class="navi-description">数据</span></strong></a>
                                     <ul class="sub-menu">
                                         <li>
-                                            <a href="#"><span>审批本期</span></a>
+                                            <a href="../../data/summary"><span>上报本期汇总表</span></a>
                                         </li>
                                         <li>
-                                            <a href="#"><span>上报本期汇总表</span></a>
+                                            <a href="../../data/delete"><span>删除历史数据</span></a>
                                         </li>
-                                        <li>
-                                            <a href="#"><span>删除历史数据</span></a>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#"><strong class="text_nbsp"><span
+                                            class="navi-description">管理</span></strong></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="../../manage/schedule"><span>设置上报时限</span></a></li>
+                                        <li><a href="../../manage/user"><span>管理用户</span></a>
                                         </li>
                                     </ul>
                                 </li>
@@ -205,29 +217,6 @@
                                     <ul class="sub-menu">
                                         <li>
                                             <a href="#"><span>待定</span></a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <a href="#"><strong class="text_nbsp"><span
-                                            class="navi-description">通知</span></strong></a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="#"><span>查看通知</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span>发布通知</span></a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <a href="#"><strong class="text_nbsp"><span
-                                            class="navi-description">管理</span></strong></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="#"><span>设置上报时限</span></a></li>
-                                        <li><a href="#"><span>管理用户</span></a>
                                         </li>
                                     </ul>
                                 </li>
@@ -270,7 +259,7 @@
 
 
                                 <p class="breadcrumb1">
-                                    <a href="#">企业版主页</a>
+                                    <a href="../../inform">主页</a>
                                     <a href="#">查询</a>
                                     <span class='current_crumb'>查看往期汇总表</span>
                                 </p>
@@ -296,8 +285,8 @@
                                     <h3 id="reply-title" class="comment-reply-title">
                                         <h2><i class="fa fa-search fa-3x" style="font-size:22px;"></i> 查看往期汇总表</h2>
                                     </h3>
-                                    
-                                    
+
+
                                     <table id="table_company_list">
                                         <tr>
                                             <th>期数</th>

@@ -84,7 +84,7 @@
     <style type="text/css">
             <style>
         .mytable{
-            
+
             border: 1px #a9c6c9 solid;
         }
         .mytable th, .mytable td{
@@ -95,7 +95,7 @@
         .mytable th{
             width: 300px;
         }
-        
+
     </style>
 </head>
 <body>
@@ -137,53 +137,60 @@
                         <!-- ***************** - 导航栏菜单 - ***************** -->
                         <nav role="navigation">
                             <ul id="menu-main-nav" class="navbar-nav">
-                                <li >
+                               <li>
                                     <a href="#"><strong class="text_nbsp"><span
-                                            class="navi-description">主页</span></strong></a>
-                                </li>
-                                <li>
-                                    <a href="#"><strong class="text_nbsp"><span
-                                            class="navi-description">查询</span></strong></a>
+                                            class="navi-description">通知</span></strong></a>
                                     <ul class="sub-menu">
-
                                         <li>
-                                            <a href="#"><span>查看企业</span></a>
+                                            <a href="../../inform"><span>查看通知</span></a>
                                         </li>
                                         <li>
-                                            <a href="#"><span>查询企业备案</span></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="#"><span>名称</span></a>
-                                                </li>
-                                                <li><a href="#"><span>市</span></a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span>已备案企业</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span>未备案企业</span></a>
-
-                                        </li>
-                                        <li>
-                                            <a href="#"><span>查看往期汇总表</span></a>
+                                            <a href="../../inform/add"><span>发布通知</span></a>
                                         </li>
                                     </ul>
                                 </li>
 
+                                <li>
+                                    <a href="#"><strong class="text_nbsp"><span
+                                            class="navi-description">查询</span></strong></a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="#"><span>查看备案</span></a>
+                                            <ul class="sub-menu">
+                                                <li><a href="../../search/company"><span>查询企业备案</span></a>
+                                                </li>
+                                                <li><a href="../../search/checked"><span>已备案企业</span></a>
+                                                </li>
+                                                <li><a href="../../search/unchecked"><span>未备案企业</span></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="../../search/history"><span>查看往期汇总表</span></a>
+                                        </li>
+                                    </ul>
+                                  </li>
+
 
                                 <li class="current_page_parent">
                                     <a href="#"><strong class="text_nbsp"><span
-                                            class="navi-description">审批</span></strong></a>
+                                            class="navi-description">数据</span></strong></a>
                                     <ul class="sub-menu">
                                         <li>
-                                            <a href="#"><span>审批本期</span></a>
+                                            <a href="../../data/summary"><span>上报本期汇总表</span></a>
                                         </li>
                                         <li>
-                                            <a href="#"><span>上报本期汇总表</span></a>
+                                            <a href="../../data/delete"><span>删除历史数据</span></a>
                                         </li>
-                                        <li>
-                                            <a href="#"><span>删除历史数据</span></a>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#"><strong class="text_nbsp"><span
+                                            class="navi-description">管理</span></strong></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="../../manage/schedule"><span>设置上报时限</span></a></li>
+                                        <li><a href="../../manage/user"><span>管理用户</span></a>
                                         </li>
                                     </ul>
                                 </li>
@@ -195,29 +202,6 @@
                                     <ul class="sub-menu">
                                         <li>
                                             <a href="#"><span>待定</span></a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <a href="#"><strong class="text_nbsp"><span
-                                            class="navi-description">通知</span></strong></a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="#"><span>查看通知</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span>发布通知</span></a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <a href="#"><strong class="text_nbsp"><span
-                                            class="navi-description">管理</span></strong></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="#"><span>设置上报时限</span></a></li>
-                                        <li><a href="#"><span>管理用户</span></a>
                                         </li>
                                     </ul>
                                 </li>
@@ -259,8 +243,8 @@
                                 <h1>山东省企业数据采集系统——删除历史数据</h1>
 
                                 <p class="breadcrumb1">
-                                    <a href="#">主页</a>
-                                    <a href="#">审批</a>
+                                    <a href="../../inform">主页</a>
+                                    <a href="#">数据</a>
                                     <span class='current_crumb'>删除历史数据</span>
                                 </p>
                             </div><!-- END frame -->
@@ -281,25 +265,30 @@
                         </h3>
 
                         <table class="mytable">
-                            <tbody>
-                                <tr>
-                                    <th>数据编号</th>
-                                    <th>期号</th>
-                                    <th>时间</th>
-                                    <th>公司名称</th>
-                                    <th>申报状态</th>
-                                    <th>处理</th>
-                                </tr>
-                            </tbody>
+                            <tr>
+                                <th>期数</th>
+                                <th>时间</th>
+                                <th>公司名称</th>
+                                <th>处理</th>
+                            </tr>
+                            <tr>
+                                <td id="data_id" style="display:none;">这是一个隐藏的字段用来传递历史数据的id</td>
 
-                            <tbody id="data-tbody">
+                                <td id="schedule_id"></td>
+                                <td>
+                                    <p id="year" style="display:inline;">2013年</p>
+                                    <p id="month" style="display:inline;">12月</p>
+                                </td>
+                                <td id="name">阿里巴巴</td>
+                                <td>
+                                    <button class="ka_button medium_button medium_steelgreen"  type="button" >删除</button><br />
+                                </td>
 
-                            </tbody>
-
+                            </tr>
                         </table>
 
-                      
-                   
+
+
                 </div><!-- END main-area -->
 
             <div id="footer-top">&nbsp;</div>
@@ -454,6 +443,5 @@
         document.documentElement.className += ' ie10';
     }
 </script><!--<![endif]-->
-<script type="text/javascript" src="data-delete.js"></script>
 </body>
 </html>
