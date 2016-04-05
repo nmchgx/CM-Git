@@ -55,3 +55,26 @@ function ChangeCodeToCity (code)
 			break;
 	}
 }
+
+function getCompanyName () {
+	$.ajax({
+		type: "GET",
+		url: "../../php-common/get-company-name.php",
+		success: function (data) {
+			console.log(data.trim());
+			if (data.trim() != "") {
+				var json = JSON.parse(data.trim());
+				if (json.msg == "success") {
+					$('#welcome').html("欢迎您, "+json.data.name);
+				}
+			}
+		},
+		error: function (data) {
+			console.log("error: "+data);
+		}
+	});
+}
+
+$(document).ready(function(){
+	getCompanyName();
+});
