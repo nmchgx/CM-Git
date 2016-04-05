@@ -13,11 +13,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="UTF-8">
-    <script type="text/javascript" src="../../js/jquery-1.12.1.min.js"></script>
-    <title>province － search not having record</title>
+    <script type="text/javascript" src="../../../js/jquery-1.12.1.min.js"></script>
+    <title>province － search</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="../../css/bootstrap.min.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css" type="text/css" media="all"/>
 
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="#" href="#"/>
@@ -26,13 +26,13 @@
     <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans|Lato' rel='stylesheet' type='text/css'>-->
 
     <!-- Primary CSS -->
-    <link rel="stylesheet" href="../../css/style.css" type="text/css" media="all"/>
-    <link rel="stylesheet" href="../../css/_mobile.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/_mobile.css" type="text/css" media="all"/>
 
     <!-- Color Scheme CSS -->
-    <link rel="stylesheet" href="../../css/karma-steel-green.css" type="text/css" media="all"/>
-    <link rel="stylesheet" href="../../css/secondary-steel-green.css" type="text/css" media="all"/>
-    <link rel="stylesheet" href="../../css/_font-awesome.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/karma-steel-green.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/secondary-steel-green.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/_font-awesome.css" type="text/css" media="all"/>
 
 
     <!--[if IE 9]>
@@ -79,7 +79,7 @@
     </style>
     <![endif]-->
     <!--[if IE]>
-    <link rel="stylesheet" href="../../css/_internet_explorer.css" media="screen"/>
+    <link rel="stylesheet" href="../../../css/_internet_explorer.css" media="screen"/>
     <![endif]-->
     <style type="text/css">
         #from_record_search select{
@@ -144,7 +144,7 @@
             <div class="header-holder tt-logo-center">
                 <div class="header-overlay">
                     <div class="header-area">
-                        <a href="#l" class="logo"><img src="../../images/LOGO.png"
+                        <a href="#l" class="logo"><img src="../../../images/LOGO.png"
                                                        alt="Karma Responsive Web Template" class="tt-retina-logo" width="154" height="57"/></a>
 
 
@@ -266,12 +266,14 @@
                         <div class="tools">
                             <span class="tools-top"></span>
                             <div class="frame">
-                                <h1>山东省企业数据采集系统——未备案企业</h1>
+                                <h1>山东省企业数据采集系统——查询备案企业</h1>
+
+
                                 <p class="breadcrumb1">
                                     <a href="#">企业版主页</a>
                                     <a href="#">查询</a>
                                     <a href="#">查看备案</a>
-                                    <span class='current_crumb'>未备案企业</span>
+                                    <span class='current_crumb'>查询备案企业</span>
                                 </p>
                             </div><!-- END frame -->
 
@@ -293,9 +295,21 @@
                             <div >
                                 <div  class="comment-respond">
                                     <h3 id="reply-title" class="comment-reply-title">
-                                        <h2><i class="fa fa-search fa-3x" style="font-size:22px;"></i>未备案企业</h2>
+                                        <h2><i class="fa fa-search fa-3x" style="font-size:22px;"></i> 查询企业备案</h2>
                                     </h3>
                                     
+                                    <!--搜索框-->
+                                    <form action="" method="post" id="from_record_search">
+                                        <select name="search_type">
+                                            <option selected="selected">按城市编号</option>
+                                            <option>按企业名称</option>          
+                                        </select>
+
+                                        <input name="search_value" type="text"/>
+                                        
+                                        <button class="ka_button medium_button medium_steelgreen"  type="button" >搜索</button>
+                                        <br />
+                                    </form>
                                     
                                     <!--搜索结果显示-->
                                     <table id="table_company_list">
@@ -304,6 +318,7 @@
                                             <th>公司名称</th>
                                             <th>公司账号</th>
                                             <th>城市</th>
+                                            <th>是否备案</th>
                                             <th>企业所属地区</th>
                                             <th>企业机构代码</th>
                                             <th>企业性质</th>
@@ -321,6 +336,7 @@
                                             <td id="name"></td>
                                             <td id="account"></td>
                                             <td id="city"></td>
+                                            <td id="check"></td>
                                             <td id="area"></td>
                                             <td id="code"></td>
                                             <td id="type"></td>
@@ -459,17 +475,17 @@
 
 
 <!-- ***************** - JavaScript Starts Here - ***************** -->
-<script type="text/javascript" src="../../js/custom-main.js"></script>
-<script type="text/javascript" src="../../js/superfish.js"></script>
-<script type="text/javascript" src="../../js/jquery.flexslider.js"></script>
-<script type="text/javascript" src="../../js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="../../js/scrollWatch.js"></script>
-<script type="text/javascript" src="../../js/jquery.isotope.js"></script>
-<script type="text/javascript" src="../../js/jquery.ui.core.min.js"></script>
-<script type="text/javascript" src="../../js/jquery.ui.widget.min.js"></script>
-<script type="text/javascript" src="../../js/jquery.ui.tabs.min.js"></script>
-<script type="text/javascript" src="../../js/jquery.ui.accordion.min.js"></script>
-<script type="text/javascript" src="../../js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="../../../js/custom-main.js"></script>
+<script type="text/javascript" src="../../../js/superfish.js"></script>
+<script type="text/javascript" src="../../../js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="../../../js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="../../../js/scrollWatch.js"></script>
+<script type="text/javascript" src="../../../js/jquery.isotope.js"></script>
+<script type="text/javascript" src="../../../js/jquery.ui.core.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery.ui.widget.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery.ui.tabs.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery.ui.accordion.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery.prettyPhoto.js"></script>
 <script>
     jQuery(document).ready(function () {
         jQuery('.tt-parallax-text').fadeIn(1000); //delete this to remove fading content

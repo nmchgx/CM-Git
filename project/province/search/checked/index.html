@@ -1,46 +1,50 @@
 <!DOCTYPE html>
-<!--[if IE 7 ]><html class="ie ie7" lang="en"><![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
-<!--[if IE 9 ]><html class="ie ie9" lang="en"><![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7" lang="en"><![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="en"><![endif]-->
+<!--[if IE 9 ]>
+<html class="ie ie9" lang="en"><![endif]-->
 <!--[if !IE]><!-->
 <html lang="en-US">
 <!--<![endif]-->
 
 <head>
-    <!-- un-comment and delete 2nd meta below to disable zoom (not cool)
-    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="UTF-8">
-    <script type="text/javascript" src="../js/jquery-1.12.1.min.js"></script>
-    <title>province-data query</title>
+    <script type="text/javascript" src="../../../js/jquery-1.12.1.min.js"></script>
+    <title>province － search having record</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css" type="text/css" media="all"/>
 
     <!-- RSS -->
-    <link rel="alternate" type="application/rss+xml" title="#" href="#" />
+    <link rel="alternate" type="application/rss+xml" title="#" href="#"/>
+
+    <!--&lt;!&ndash; Google Font &ndash;&gt;-->
+    <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans|Lato' rel='stylesheet' type='text/css'>-->
 
     <!-- Primary CSS -->
-    <link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="../css/_mobile.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/_mobile.css" type="text/css" media="all"/>
 
     <!-- Color Scheme CSS -->
-    <link rel="stylesheet" href="../css/karma-steel-green.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="../css/secondary-steel-green.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="../css/_font-awesome.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../../../css/karma-steel-green.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/secondary-steel-green.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/_font-awesome.css" type="text/css" media="all"/>
 
 
     <!--[if IE 9]>
     <style media="screen">
         #footer,
-        .header-holder
-        {
-            behavior: url(../../js/PIE/PIE.htc);
+        .header-holder {
+            behavior: url(js/PIE/PIE.htc);
         }
     </style>
     <![endif]-->
     <!--[if lte IE 8]>
-    <script type='text/javascript' src='../js/html5shiv.js'></script>
+    <script type='text/javascript' src='../../js/html5shiv.js'></script>
     <style media="screen">
         /* uncomment for IE8 rounded corners
         #menu-main-nav .drop ul a,
@@ -70,22 +74,43 @@
         .opener,
         .callout_button,
         .testimonials {
-            behavior: url(../../js/PIE/PIE.htc);
+            behavior: url(js/PIE/PIE.htc);
         }
     </style>
     <![endif]-->
     <!--[if IE]>
-    <link rel="stylesheet" href="../css/_internet_explorer.css" media="screen"/>
+    <link rel="stylesheet" href="../../../css/_internet_explorer.css" media="screen"/>
     <![endif]-->
-    <style>
-        .table th,.table td{
-            text-align: center;
+    <style type="text/css">
+        #from_record_search select{
+            width: 150px;
+            font-size: 28px;
+            margin: 10px;
+            
         }
-        .table tr:hover{
-            background: #FFFFFF;
+        #from_record_search button{
+            width: 80px;
+            height: 20px;
+            margin: 10px;
+            line-height: 5px;
+        }
+        #table_company_list{
+            margin-top:20px;
+            border: 1px #a9c6c9 solid;
+        }
+        #table_company_list th, #table_company_list td{
+            text-align: center;
+            border: 1px #a9c6c9 solid;
+            width: 200px;
+
+        }
+        #table_company_list td{
+            height: 35px;
+        }
+        #table_company_list tr:hover{
+            background-color: #fff;
         }
     </style>
-    <script src="../js/echarts.common.min.js"></script>
 </head>
 <body>
 <div id="tt-wide-layout" class="content-style-default">
@@ -119,7 +144,7 @@
             <div class="header-holder tt-logo-center">
                 <div class="header-overlay">
                     <div class="header-area">
-                        <a href="#l" class="logo"><img src="../images/LOGO.png"
+                        <a href="#l" class="logo"><img src="../../../images/LOGO.png"
                                                        alt="Karma Responsive Web Template" class="tt-retina-logo" width="154" height="57"/></a>
 
 
@@ -130,7 +155,7 @@
                                     <a href="#"><strong class="text_nbsp"><span
                                             class="navi-description">主页</span></strong></a>
                                 </li>
-                                <li>
+                                <li class="current_page_parent">
                                     <a href="#"><strong class="text_nbsp"><span
                                             class="navi-description">查询</span></strong></a>
                                     <ul class="sub-menu">
@@ -138,21 +163,17 @@
                                         <li>
                                             <a href="#"><span>查看企业</span></a>
                                         </li>
+                                        
                                         <li>
-                                            <a href="#"><span>查询企业备案</span></a>
+                                            <a href="#"><span>查看备案</span></a>
                                             <ul class="sub-menu">
-                                                <li><a href="#"><span>名称</span></a>
+                                                <li><a href="#"><span>查询企业备案</span></a>
                                                 </li>
-                                                <li><a href="#"><span>市</span></a>
+                                                <li><a href="#"><span>已备案企业</span></a>
+                                                </li>
+                                                <li><a href="#"><span>未备案企业</span></a>
                                                 </li>
                                             </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span>已备案企业</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span>未备案企业</span></a>
-
                                         </li>
                                         <li>
                                             <a href="#"><span>查看往期汇总表</span></a>
@@ -178,7 +199,7 @@
                                 </li>
 
 
-                                <li class="current_page_parent">
+                                <li>
                                     <a href="#"><strong class="text_nbsp"><span
                                             class="navi-description">数据分析</span></strong></a>
                                     <ul class="sub-menu">
@@ -188,7 +209,7 @@
                                     </ul>
                                 </li>
 
-                                <li >
+                                <li>
                                     <a href="#"><strong class="text_nbsp"><span
                                             class="navi-description">通知</span></strong></a>
                                     <ul class="sub-menu">
@@ -220,138 +241,124 @@
             </div><!-- END header-holder -->
         </header><!-- END header -->
 
-
+        <!-- 侧边导航栏 -->
+        <!--<nav role="navigation" id="sub_nav" class="nav_padding">-->
+        <!--<ul class="sub-menu">-->
+        <!--<li><a href="#">子标签1</a></li>-->
+        <!--<li><a href="#">子标签2</a></li>-->
+        <!--<li><a href="#">子标签3</a></li>-->
+        <!--<li><a href="#">子标签4</a></li>-->
+        <!--<li><a href="#">子标签5</a></li>-->
+        <!--<li><a href="#">子标签6</a></li>-->
+        <!--<li><a href="#">子标签7</a></li>-->
+        <!--<li><a href="#">……</a></li>-->
+        <!--</ul>-->
+        <!--</nav>&lt;!&ndash; END sub_nav &ndash;&gt;-->
 
 
         <!-- ***************** - Main Content Area - ***************** -->
+
         <div id="main">
-            <div class="main-area">
+                <div class="main-area row">
 
-                <!-- ***************** - Breadcrumbs Start Here - ***************** -->
-                <div>
-                    <div class="tools">
-                        <span class="tools-top"></span>
-                        <div class="frame">
-                            <h1>山东省企业数据采集系统——数据查询</h1>
+                    <!-- ***************** - Breadcrumbs Start Here - ***************** -->
+                    <div>
+                        <div class="tools">
+                            <span class="tools-top"></span>
+                            <div class="frame">
+                                <h1>山东省企业数据采集系统——已备案企业</h1>
+                                <p class="breadcrumb1">
+                                    <a href="#">企业版主页</a>
+                                    <a href="#">查询</a>
+                                    <a href="#">查看备案</a>
+                                    <span class='current_crumb'>已备案企业</span>
+                                </p>
+                            </div><!-- END frame -->
 
-                            <p class="breadcrumb1"><a href="#">主页</a>
-                               <span class='current_crumb'>数据查询</span>
-                            </p>
-                        </div><!-- END frame -->
-
-                        <span class="tools-bottom"></span>
-                    </div><!-- END tools -->
-                </div>
-
-
-
-
-                <!-- ////////////////////////////////////////////////////////// -->
-                <!-- ***************** - 主内容显示区 - ***************** -->
-                <!-- ////////////////////////////////////////////////////////// -->
-                <div>
-                    <main role="main">
-
-                        <!--以下为内容编辑区-->
-                        <div class="col-md-8 col-md-offset-2">
-                            <table class="table table-bordered">
-                                <thead>
-                                <tr>
-                                    <th class="text-center">属性</th>
-                                    <th class="text-center col-md-8">值</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>单位名称</td>
-                                    <td id="name">1</td>
-                                </tr>
-                                <tr>
-                                    <td>登录账号</td>
-                                    <td id="account">1</td>
-                                </tr>
-                                <tr>
-                                    <td>用户类型</td>
-                                    <td id="type">1</td>
-                                </tr>
-                                <tr>
-                                    <td>所属地市</td>
-                                    <td id="area">1</td>
-                                </tr>
-                                <tr>
-                                    <td>所属市县</td>
-                                    <td id="??">1</td>
-                                </tr>
-                                <tr>
-                                    <td>所处区域</td>
-                                    <td id="?1">1</td>
-                                </tr>
-                                <tr>
-                                    <td>数据状态</td>
-                                    <td id="?2">1</td>
-                                </tr>
-                                <tr>
-                                    <td>单位性质</td>
-                                    <td id="industry">1</td>
-                                </tr>
-                                <tr>
-                                    <td>所属行业</td>
-                                    <td id="business">1</td>
-                                </tr>
-                                <tr>
-                                    <td>起始日期</td>
-                                    <td id="?3">1</td>
-                                </tr>
-                                <tr>
-                                    <td>结束日期</td>
-                                    <td id="?4">1</td>
-                                </tr>
-                                <tr>
-                                    <td>统计月份</td>
-                                    <td id="data[month]">1</td>
-                                </tr>
-                                <tr>
-
-                                    <td>统计季度</td>
-                                    <td id="?5">1</td>
-                                </tr>
-                                </tbody>
-
-                            </table>
-                        </div>
-
-                        <div class="col-sm-offset-5 col-sm-10">
-                            <button type="button" href="#" class="btn btn-default">返回</button>
-                            <button type="button"  class="btn btn-success">导出到Excel</button>
-                        </div>
+                            <span class="tools-bottom"></span>
+                        </div><!-- END tools -->
+                    </div>
 
 
-                        <!-- ////////////////////////////////////////////////////////// -->
-                        <!-- ***************** -  主内容显示区 END  - ****************** -->
-                        <!-- ////////////////////////////////////////////////////////// -->
-                    </main><!-- END main #content -->
-                </div>
-
-            <!-- END main-->
-
-            </div><!-- END main-area -->
-
-            <div id="footer-top">&nbsp;</div>
-        </div><!-- END main -->
+                    <!-- ////////////////////////////////////////////////////////// -->
+                    <!-- ***************** -   主内容显示区   - ***************** -->
+                    <!-- ////////////////////////////////////////////////////////// -->
 
 
+                    <div>
+                        <main role="main" id="content" >
+
+                            <!--以下为内容编辑区-->
+
+                            <div >
+                                <div  class="comment-respond">
+                                    <h3 id="reply-title" class="comment-reply-title">
+                                        <h2><i class="fa fa-search fa-3x" style="font-size:22px;"></i>已备案企业</h2>
+                                    </h3>
+                                    
+                                    
+                                    <!--搜索结果显示-->
+                                    <table id="table_company_list">
+                                        <tr>
+                                            <th>公司id</th>
+                                            <th>公司名称</th>
+                                            <th>公司账号</th>
+                                            <th>城市</th>
+                                            <th>企业所属地区</th>
+                                            <th>企业机构代码</th>
+                                            <th>企业性质</th>
+                                            <th>所属行业</th>
+                                            <th>主要经营业务</th>
+                                            <th>联系人</th>
+                                            <th>联系地址</th>
+                                            <th>邮政编码</th>
+                                            <th>联系电话</th>
+                                            <th>传真</th>
+                                            <th>Email</th>
+                                        </tr>
+                                        <tr>
+                                            <td id="company_id"></td>
+                                            <td id="name"></td>
+                                            <td id="account"></td>
+                                            <td id="city"></td>
+                                            <td id="area"></td>
+                                            <td id="code"></td>
+                                            <td id="type"></td>
+                                            <td id="industry"></td>
+                                            <td id="business"></td>
+                                            <td id="contact"></td>
+                                            <td id="address"></td>
+                                            <td id="post"></td>
+                                            <td id="tel"></td>
+                                            <td id="fax"></td>
+                                            <td id="email"></td>
+                                        </tr>
+                                    </table>
+
+                                </div>
+                            </div>
+                            <!-- ////////////////////////////////////////////////////////// -->
+                            <!-- ***************** -  主内容显示区 END  - ****************** -->
+                            <!-- ////////////////////////////////////////////////////////// -->
+                        </main><!-- END main #content -->
+                    </div>
+                </div><!-- END main-area -->
+
+                <div id="footer-top">&nbsp;</div>
+            </div><!-- END main -->
+        </div>
 
 
         <!-- ***************** - Footer Starts Here - ***************** -->
         <footer role="contentinfo" id="footer">
-            <!--<div id="footer-callout" class="default-callout-link">-->
-            <!--<div id="footer-callout-content">-->
-            <!--<a href="#" class="footer-callout-link">-->
-            <!--<p class="footer-callout-heading">超链接区</p>-->
-            <!--<p class="footer-callout-text">可作为系统监控入口 </p>-->
-            <!--</a>-->
-            <!--</div>&lt;!&ndash; END footer-callout-content &ndash;&gt;-->
-            <!--</div>&lt;!&ndash; END footer-callout &ndash;&gt;-->
+            <div id="footer-callout" class="default-callout-link">
+                <div id="footer-callout-content">
+                    <a href="#" class="footer-callout-link">
+                        <p class="footer-callout-heading">超链接区</p>
+                        <p class="footer-callout-text">可作为系统监控入口 </p>
+                    </a>
+                </div><!-- END footer-callout-content -->
+            </div><!-- END footer-callout -->
 
             <div class="footer-overlay">
                 <div class="footer-content">
@@ -451,23 +458,19 @@
 </div><!-- END tt-layout -->
 
 
-
-
 <!-- ***************** - JavaScript Starts Here - ***************** -->
-
-<script type="text/javascript" src="../js/custom-main.js"></script>
-<script type="text/javascript" src="../js/superfish.js"></script>
-<script type="text/javascript" src="../js/jquery.flexslider.js"></script>
-<script type="text/javascript" src="../js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="../js/scrollWatch.js"></script>
-<script type="text/javascript" src="../js/jquery.isotope.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.core.min.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.widget.min.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.tabs.min.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.accordion.min.js"></script>
-<script type="text/javascript" src="../js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="../../../js/custom-main.js"></script>
+<script type="text/javascript" src="../../../js/superfish.js"></script>
+<script type="text/javascript" src="../../../js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="../../../js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="../../../js/scrollWatch.js"></script>
+<script type="text/javascript" src="../../../js/jquery.isotope.js"></script>
+<script type="text/javascript" src="../../../js/jquery.ui.core.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery.ui.widget.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery.ui.tabs.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery.ui.accordion.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery.prettyPhoto.js"></script>
 <script>
-
     jQuery(document).ready(function () {
         jQuery('.tt-parallax-text').fadeIn(1000); //delete this to remove fading content
 
@@ -484,13 +487,12 @@
             });
         });
     });
-
-
 </script>
 
-<!--[if !IE]><!--><script>
+<!--[if !IE]><!-->
+<script>
     if (/*@cc_on!@*/false) {
-        document.documentElement.className+=' ie10';
+        document.documentElement.className += ' ie10';
     }
 </script><!--<![endif]-->
 </body>

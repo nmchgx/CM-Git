@@ -13,11 +13,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="UTF-8">
-    <script type="text/javascript" src="../../js/jquery-1.12.1.min.js"></script>
-    <title>province － show company list</title>
+    <script type="text/javascript" src="../../../js/jquery-1.12.1.min.js"></script>
+    <title>province - history gather</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="../../css/bootstrap.min.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css" type="text/css" media="all"/>
 
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="#" href="#"/>
@@ -26,13 +26,13 @@
     <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans|Lato' rel='stylesheet' type='text/css'>-->
 
     <!-- Primary CSS -->
-    <link rel="stylesheet" href="../../css/style.css" type="text/css" media="all"/>
-    <link rel="stylesheet" href="../../css/_mobile.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/_mobile.css" type="text/css" media="all"/>
 
     <!-- Color Scheme CSS -->
-    <link rel="stylesheet" href="../../css/karma-steel-green.css" type="text/css" media="all"/>
-    <link rel="stylesheet" href="../../css/secondary-steel-green.css" type="text/css" media="all"/>
-    <link rel="stylesheet" href="../../css/_font-awesome.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/karma-steel-green.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/secondary-steel-green.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../../../css/_font-awesome.css" type="text/css" media="all"/>
 
 
     <!--[if IE 9]>
@@ -79,7 +79,7 @@
     </style>
     <![endif]-->
     <!--[if IE]>
-    <link rel="stylesheet" href="../../css/_internet_explorer.css" media="screen"/>
+    <link rel="stylesheet" href="../../../css/_internet_explorer.css" media="screen"/>
     <![endif]-->
     <style type="text/css">
         #from_record_search select{
@@ -144,7 +144,7 @@
             <div class="header-holder tt-logo-center">
                 <div class="header-overlay">
                     <div class="header-area">
-                        <a href="#l" class="logo"><img src="../../images/LOGO.png"
+                        <a href="#l" class="logo"><img src="../../../images/LOGO.png"
                                                        alt="Karma Responsive Web Template" class="tt-retina-logo" width="154" height="57"/></a>
 
 
@@ -266,13 +266,13 @@
                         <div class="tools">
                             <span class="tools-top"></span>
                             <div class="frame">
-                                <h1>山东省企业数据采集系统——查看企业</h1>
+                                <h1>山东省企业数据采集系统——查看往期汇总表</h1>
 
 
                                 <p class="breadcrumb1">
                                     <a href="#">企业版主页</a>
                                     <a href="#">查询</a>
-                                    <span class='current_crumb'>查看企业</span>
+                                    <span class='current_crumb'>查看往期汇总表</span>
                                 </p>
                             </div><!-- END frame -->
 
@@ -294,20 +294,28 @@
                             <div >
                                 <div  class="comment-respond">
                                     <h3 id="reply-title" class="comment-reply-title">
-                                        <h2><i class="fa fa-search fa-3x" style="font-size:22px;"></i> 查看企业</h2>
+                                        <h2><i class="fa fa-search fa-3x" style="font-size:22px;"></i> 查看往期汇总表</h2>
                                     </h3>
                                     
                                     
                                     <table id="table_company_list">
                                         <tr>
-                                            <th>公司id</th>
-                                            <th>公司名称</th>
-                                            <th>公司账号</th>
+                                            <th>期数</th>
+                                            <th>时间</th>
+                                            <th>开始时间</th>
+                                            <th>结束时间</th>
+                                            <th>是否已上报</th>
                                         </tr>
                                         <tr>
-                                            <td id="company_id"></td>
-                                            <td id="name"></td>
-                                            <td id="account"></td>
+                                            <td id="schedule_id"></td>
+
+                                            <td>
+                                                <p id="year" style="display:inline;">2013年</p>
+                                                <p id="month" style="display:inline;">12月</p>
+                                            </td>
+                                            <td id="start"></td>
+                                            <td id="end"></td>
+                                            <td id="is_report"></td>
                                         </tr>
                                     </table>
 
@@ -435,17 +443,17 @@
 
 
 <!-- ***************** - JavaScript Starts Here - ***************** -->
-<script type="text/javascript" src="../../js/custom-main.js"></script>
-<script type="text/javascript" src="../../js/superfish.js"></script>
-<script type="text/javascript" src="../../js/jquery.flexslider.js"></script>
-<script type="text/javascript" src="../../js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="../../js/scrollWatch.js"></script>
-<script type="text/javascript" src="../../js/jquery.isotope.js"></script>
-<script type="text/javascript" src="../../js/jquery.ui.core.min.js"></script>
-<script type="text/javascript" src="../../js/jquery.ui.widget.min.js"></script>
-<script type="text/javascript" src="../../js/jquery.ui.tabs.min.js"></script>
-<script type="text/javascript" src="../../js/jquery.ui.accordion.min.js"></script>
-<script type="text/javascript" src="../../js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="../../../js/custom-main.js"></script>
+<script type="text/javascript" src="../../../js/superfish.js"></script>
+<script type="text/javascript" src="../../../js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="../../../js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="../../../js/scrollWatch.js"></script>
+<script type="text/javascript" src="../../../js/jquery.isotope.js"></script>
+<script type="text/javascript" src="../../../js/jquery.ui.core.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery.ui.widget.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery.ui.tabs.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery.ui.accordion.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery.prettyPhoto.js"></script>
 <script>
     jQuery(document).ready(function () {
         jQuery('.tt-parallax-text').fadeIn(1000); //delete this to remove fading content
