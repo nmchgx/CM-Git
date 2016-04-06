@@ -288,24 +288,18 @@
 
 
                                     <table id="table_company_list">
-                                        <tr>
-                                            <th>期数</th>
-                                            <th>时间</th>
-                                            <th>开始时间</th>
-                                            <th>结束时间</th>
-                                            <th>是否已上报</th>
-                                        </tr>
-                                        <tr>
-                                            <td id="schedule_id"></td>
+                                        <tbody>
+                                            <tr>
+                                                <th>期号</th>
+                                                <th>时间</th>
+                                                <th>开始时间</th>
+                                                <th>结束时间</th>
+                                                <th>是否已上报</th>
+                                            </tr>
+                                        </tbody>
+                                        <tbody id="schedule-tbody">
 
-                                            <td>
-                                                <p id="year" style="display:inline;">2013年</p>
-                                                <p id="month" style="display:inline;">12月</p>
-                                            </td>
-                                            <td id="start"></td>
-                                            <td id="end"></td>
-                                            <td id="is_report"></td>
-                                        </tr>
+                                        </tbody>
                                     </table>
 
                                 </div>
@@ -468,5 +462,6 @@
         document.documentElement.className += ' ie10';
     }
 </script><!--<![endif]-->
+<script type="text/javascript" src="history-schedule.js"></script>
 </body>
 </html>
