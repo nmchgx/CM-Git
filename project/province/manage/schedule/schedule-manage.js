@@ -3,7 +3,7 @@
  */
 $(document).ready(function(){
 });
-
+//调用add-schedule.php通过点击事件将新数据添加入数据库中
 function addSchedule(){
     var year = $('input[name=year]').val();
     var month = $('input[name=month]').val();
