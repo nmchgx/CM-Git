@@ -19,7 +19,7 @@ if($search_type == "按城市编号"){
     $search_value = $_POST['search_value'];
     $sql = "SELECT company_id, account, city, company.check, area, code, company.name,
                company.type, industry, business, contact, address, post, tel, fax,
-               email FROM company WHERE city like '%$search_value%'";
+               email FROM company WHERE city = '$search_value'";
 
     $sqlResult = $mysql->query($sql);
 

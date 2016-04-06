@@ -13,7 +13,7 @@
 require "sqlHelper.php";
 require "jsonHelper.php";
 
-$sql = "select schedule_id, date_format(start,'%Y-%m-%d') as start, date_format(start,'%Y-%m-%d') as end, year, month, is_report from schedule ORDER BY start DESC";
+$sql = "select schedule_id, date_format(start,'%Y-%m-%d') as start, date_format(end,'%Y-%m-%d') as end, year, month, is_report from schedule ORDER BY start DESC";
 $sqlResult = $mysql->query($sql);
 $result=null;
 $data=null;
