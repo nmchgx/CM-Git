@@ -13,10 +13,8 @@ require "jsonHelper.php";
 
 $action = $_POST['action'];
 
-$data_id = $_POST['data_id'];
 $company_id = $_POST['company_id'];
 $schedule_id = $_POST['schedule_id'];
-$status = $_POST['status'];
 $employment_last = $_POST['employment_last'];
 $employment_now = $_POST['employment_now'];
 $reason = $_POST['reason'];

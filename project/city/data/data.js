@@ -83,6 +83,14 @@ function fillData (i) {
     $("#second_explain").html(history_data[i].second_explain);
     $("#third_reason").html(history_data[i].third_reason);
     $("#third_explain").html(history_data[i].third_explain);
+
+    var addAlterListener = function (i) {
+        return function () {
+            location.href="alter/index.html?company_id=" + history_data[i].company_id + "&schedule_id=" + history_data[i].schedule_id + "&name=" + history_data[i].name;
+        }
+    }
+
+    $("#alter-btn").click(addAlterListener(i));
 }
 
 function examineData(action) {
@@ -91,10 +99,8 @@ function examineData(action) {
         url: "../../php-common/examine-data.php",
         data:{
             action: action,
-            data_id: $('#data_id').html(),
             company_id: $('#company_id').html(),
             schedule_id: $('#schedule_id').html(),
-            status: $('#status').html(),
             employment_last: $('#employment_last').html(),
             employment_now: $('#employment_now').html(),
             reason: $('#reason').html(),
