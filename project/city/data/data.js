@@ -58,7 +58,7 @@ function fillDataList (data) {
         if (i == 0) {
             holder.children('a').click();
         }
-        holder.children('a').html(history_data[i].company_id);
+        holder.children('a').html(history_data[i].name);
         holder.fadeIn(600);
     }
 
@@ -67,8 +67,12 @@ function fillDataList (data) {
 
 function fillData (i) {
     $("#name").html(history_data[i].name+" - "+history_data[i].status);
-    $("#company_id").html(history_data[i].company_id);
 
+    $("#data_id").html(history_data[i].data_id);
+    $("#company_id").html(history_data[i].company_id);
+    $("#schedule_id").html(history_data[i].schedule_id);
+
+    $("#status").html(history_data[i].status);
     $("#employment_last").html(history_data[i].employment_last);
     $("#employment_now").html(history_data[i].employment_now);
     $("#reason").html(history_data[i].reason);
@@ -79,6 +83,43 @@ function fillData (i) {
     $("#second_explain").html(history_data[i].second_explain);
     $("#third_reason").html(history_data[i].third_reason);
     $("#third_explain").html(history_data[i].third_explain);
-    $("#schedule_id").html(history_data[i].schedule_id);
-    $("#status").html(history_data[i].status);
+}
+
+function examineData(action) {
+    $.ajax({
+        type: "POST",
+        url: "../../php-common/examine-data.php",
+        data:{
+            action: action,
+            data_id: $('#data_id').html(),
+            company_id: $('#company_id').html(),
+            schedule_id: $('#schedule_id').html(),
+            status: $('#status').html(),
+            employment_last: $('#employment_last').html(),
+            employment_now: $('#employment_now').html(),
+            reason: $('#reason').html(),
+            type: $('#type').html(),
+            first_reason: $('#first_reason').html(),
+            first_explain: $('#first_explain').html(),
+            second_reason: $('#second_reason').html(),
+            second_explain: $('#second_explain').html(),
+            third_reason: $('#third_reason').html(),
+            third_explain: $('#third_explain').html()
+        },
+        success: function (data) {
+            console.log(data.trim());
+            if (data.trim() != "") {
+                var json = JSON.parse(data.trim());
+                if (json.msg == "success") {
+                    getData();
+                }
+                else {
+                    console.log("error: "+data);
+                }
+            }
+        },
+        error: function (data) {
+            console.log("error: "+data);
+        }
+    });
 }

@@ -129,7 +129,7 @@
                     <!-- ***************** - 右上方分享链接,可不要 - ***************** -->
                     <div class="toolbar-right">
                         <ul>
-                            <li><a href="#">退出登录</a></li>
+                            <li><a href="../../php-common/logout.php">退出登录</a></li>
                         </ul>
                     </div><!-- END toolbar-right -->
 
@@ -218,82 +218,65 @@
                       
                     <table class="mytable">
                         <tr>
-                            <span id="data_id"></span>
+                            <span id="data_id" style="display: none;"></span>
+                            <span id="company_id" style="display: none;"></span>
+                            <span id="schedule_id" style="display: none;"></span>
                         </tr>
                         <tr>
                             <th>建档期就业人数</th>
-                            <td id="employment_last">
-                                11
-                            </td>
+                            <td id="employment_last"></td>
                         </tr>
                         <tr>
                             <th>调查期就业人数</th>
-                            <td id="employment_now">
-                                11
-                            </td>
+                            <td id="employment_now"></td>
                         </tr>
                         <tr>
                             <th>其他原因</th>
-                            <td id="reason"> 
-                                原因
-                            </td>
+                            <td id="reason"></td>
                         </tr>
                         <tr>
                             <th>就业人数减少类型</th>
-                            <td id="type">
-                                关闭破产
-                            </td>
+                            <td id="type"></td>
                         </tr>
                         <tr>
                             <th>主要原因</th>
-                            <td id="first_reason">    
-                                产业结构调整
-                            </td>
+                            <td id="first_reason"></td>
                         </tr>
                         <tr>
                             <th>主要原因说明</th>
-                            <td id="first_explain">
-                                说明
-                            </td>
+                            <td id="first_explain"></td>
                         </tr>
                         <tr>
                             <th>次要原因</th>
-                            <td id="second_reason">
-                                产业结构调整
-                            </td>
+                            <td id="second_reason"></td>
                         </tr>
                         <tr>
                             <th>次要原因说明</th>
-                            <td id="second_explain">
-                                说明
-                            </td>
+                            <td id="second_explain"></td>
                         </tr>
                         <tr>
                             <th>第三原因</th>
-                            <td id="third_reason">
-                                产业结构调整
-                            </td>
+                            <td id="third_reason"></td>
                         </tr>
                         <tr>
                             <th>第三原因说明</th>
-                            <td id="third_explain">
-                                说明
-                            </td>
+                            <td id="third_explain"></td>
                         </tr>
                         
                     </table>
                     
                     <form>
-                        <button class="ka_button medium_button medium_yogigreen margin-top"  type="button" onclick="">退回</button>
+                        <button class="ka_button medium_button medium_yogigreen margin-top"  type="button" onclick="examineData('1')">未通过</button>
+                        <button class="ka_button medium_button medium_yogigreen margin-top margin-left"  type="button" onclick="examineData('2')">重申报</button>
                         <button class="ka_button medium_button medium_yogigreen margin-top margin-left"  type="button" onclick="">修改</button>
-                        <button class="ka_button medium_button medium_steelgreen margin-top margin-left"  type="button" onclick="">通过</button>
+                        <button class="ka_button medium_button medium_steelgreen margin-top margin-left"  type="button" onclick="examineData('4')">通过</button>
                     </form>
                     </main>
                     <!-- END main-->
                        
                    <aside role="complementary" id="sidebar" class="right_sidebar">
                        <div class="sidebar-widget">
-                          <h4>未通过企业</h4>
+                          <h4>待审批企业</h4>
                           <div class="textwidget">
                               <ul class="list" id="list-data">
                               </ul>
