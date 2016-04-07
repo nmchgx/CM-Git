@@ -5,11 +5,14 @@
  * Date: 16/3/29
  * Time: 上午11:12
  */
+session_start();
 
 require "sqlHelper.php";
 require "jsonHelper.php";
 
-$sql = "SELECT schedule_id, date_format(start,'%Y-%m-%d') as start, date_format(start,'%Y-%m-%d') as end, year, month, is_report from schedule ORDER BY start DESC LIMIT 0,1";
+$company_id = $_SESSION['company_id'];
+
+$sql = "SELECT schedule_id, date_format(start,'%Y-%m-%d') as start, date_format(start,'%Y-%m-%d') as end, year, month, is_report FROM schedule WHERE start < NOW() AND end > NOW()";
 $sqlResult = $mysql->query($sql);
 $result=null;
 $data=null;
@@ -22,7 +25,7 @@ if(!empty($sqlResult)){
     $schedule_id = $data[0]['schedule_id'];
     $result['msg'] = 'success';
 
-    $sql_s = "SELECT status FROM data WHERE schedule_id = '$schedule_id' ORDER BY time DESC LIMIT 0,1";
+    $sql_s = "SELECT status FROM data WHERE schedule_id = '$schedule_id' AND company_id = '$company_id' ORDER BY time DESC LIMIT 0,1";
     $sqlResult_s = $mysql->query($sql_s);
 
 //    echo $sql_s;
