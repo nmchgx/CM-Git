@@ -14,10 +14,6 @@ $account = $_POST['account'];
 $password = $_POST['password'];
 $type = $_POST['type'];
 
-//echo $account;
-//echo $password;
-//echo $type;
-
 if($account && $password && $type){
     if($type == 'company'){
         $sql = "SELECT * FROM company WHERE account = '$account' and password = '$password'";
@@ -34,8 +30,8 @@ if($account && $password && $type){
             echo "{\"msg\": \"error\"}";
         }
     }
-    else if($type == 'province' || $type == 'city'){
-        $sql = "SELECT * FROM province WHERE account = '$account' and password = '$password'";
+    else if($type == 'province'){
+        $sql = "SELECT * FROM province WHERE account = '$account' AND password = '$password' AND city IS NULL";
         $result = $mysql->query($sql);
 
         if($row = $result->fetch_array()) {
@@ -49,6 +45,21 @@ if($account && $password && $type){
             echo "{\"msg\": \"error\"}";
         }
 
+    }
+    else if($type == 'city'){
+        $sql = "SELECT * FROM province WHERE account = '$account' AND password = '$password' AND city IS NOT NULL";
+        $result = $mysql->query($sql);
+
+        if($row = $result->fetch_array()) {
+            foreach ($row as $key => $value) {
+                $_SESSION[$key] = $value;
+                $json[$key] = $value;
+            }
+            echo "{\"msg\": \"success\"}";
+        }
+        else {
+            echo "{\"msg\": \"error\"}";
+        }
     }
     else{
         echo "{\"msg\": \"error\"}";
