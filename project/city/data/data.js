@@ -117,7 +117,7 @@ function examineData(action) {
             if (data.trim() != "") {
                 var json = JSON.parse(data.trim());
                 if (json.msg == "success") {
-                    getData();
+                    location.href = "../data/"
                 }
                 else {
                     console.log("error: "+data);
