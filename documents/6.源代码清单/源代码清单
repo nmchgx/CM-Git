@@ -1,0 +1,141 @@
+源代码清单
+
+.
+|____city
+| |____data
+| | |____alter
+| | | |____alter.js
+| | | |____index.html
+| | |____data.js
+| | |____index.html
+| |____index.html
+| |____inform
+| | |____index.html
+| | |____inform.js
+|____company
+| |____check
+| | |____check.js
+| | |____index.html
+| |____data-add
+| | |____data-add.js
+| | |____index.html
+| |____data-history
+| | |____data-history.js
+| | |____index.html
+| |____inform
+| | |____index.html
+| | |____inform.js
+|____css
+| |_____font-awesome.css
+| |_____internet_explorer.css
+| |_____mobile.css
+| |____bootstrap.min.css
+| |____fonts
+| | |____fontawesome-webfont.eot
+| | |____fontawesome-webfont.svg
+| | |____fontawesome-webfont.woff
+| | |____繁体楷.ttf
+| |____karma-political-blue.css
+| |____karma-steel-green.css
+| |____karma-tuf-green.css
+| |____secondary-political-blue.css
+| |____secondary-steel-green.css
+| |____secondary-tuf-green.css
+| |____style.css
+|____index.html
+|____js
+| |____bootstrap.min.js
+| |____custom-main.js
+| |____echarts.common.min.js
+| |____html5shiv.js
+| |____jquery-1.12.1.min.js
+| |____jquery-migrate-1.2.1.min.js
+| |____jquery.fitvids.js
+| |____jquery.flexslider.js
+| |____jquery.isotope.js
+| |____jquery.js
+| |____jquery.prettyPhoto.js
+| |____jquery.prettySociable.js
+| |____jquery.ui.accordion.min.js
+| |____jquery.ui.core.min.js
+| |____jquery.ui.tabs.min.js
+| |____jquery.ui.widget.min.js
+| |____js-common.js
+| |____PIE
+| | |____PIE.htc
+| | |____PIE.php
+| | |____PIE_IE678.js
+| | |____PIE_IE9.js
+| |____scrollWatch.js
+| |____superfish.js
+|____login
+| |____index.html
+| |____login.js
+|____php-common
+| |____add-check.php
+| |____add-company.php
+| |____add-data.php
+| |____add-inform.php
+| |____add-schedule.php
+| |____check-company.php
+| |____check-online.php
+| |____delete-company.php
+| |____delete-data.php
+| |____delete-inform.php
+| |____examine-data.php
+| |____example.php
+| |____get-all-data.php
+| |____get-all-schedule.php
+| |____get-company-check.php
+| |____get-company-data.php
+| |____get-company-name.php
+| |____get-company.php
+| |____get-inform.php
+| |____get-nopass-data.php
+| |____get-now-schedule.php
+| |____get-schedule-data.php
+| |____jsonHelper.php
+| |____login.php
+| |____logout.php
+| |____search-company.php
+| |____sqlHelper.php
+| |____summary-schedule.php
+|____province
+| |____analysis
+| | |____province_comparative analysis.html
+| | |____province_sample analysis.html
+| | |____province_trend analysis.html
+| |____data
+| | |____delete
+| | | |____data-delete.js
+| | | |____index.html
+| | |____summary
+| | | |____index.html
+| | | |____summary.js
+| |____inform
+| | |____add
+| | | |____add.js
+| | | |____index.html
+| | |____index.html
+| | |____inform.js
+| | |____province_inform_alter.html
+| |____manage
+| | |____schedule
+| | | |____index.html
+| | | |____schedule-manage.js
+| | |____user
+| | | |____index.html
+| | | |____user-manage.js
+| |____search
+| | |____checked
+| | | |____index.html
+| | | |____search-checked.js
+| | |____company
+| | | |____index.html
+| | | |____search-company.js
+| | |____history
+| | | |____history-schedule.js
+| | | |____index.html
+| | |____unchecked
+| | | |____index.html
+| | | |____search-unchecked.js
