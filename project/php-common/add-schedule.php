@@ -28,7 +28,7 @@ if(!empty($sqlResult_time)){
         $data[$row] = $rowVal;
     }
 
-    if (count($data)){
+    if (!count($data)){
         //INSERT INTO table_name (列1, 列2,...) VALUES (值1, 值2,....)
         $sql="INSERT INTO schedule (year,month,start,end) VALUES ('$year','$month','$start','$end')";
         $sqlResult=$mysql->query($sql);
