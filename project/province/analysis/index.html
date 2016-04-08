@@ -241,23 +241,14 @@
                         <div class="row" >
                             <div class="col-md-12 col-md-offset-1">
                                 <!------------日期选择表单--------------->
-                                <form  class="form-inline" action="#">
+                                <form  class="form-inline">
 
-                                    <label>调查起始日期:</label>
-                                    <select name="time" class="form-control">
-                                        <option selected="selected" >调查期--全部</option>
-                                        <option>2016年1月</option>
-                                        <option>2016年2月</option>
+                                    <h2 style="display: inline;">调查期:</h2>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <select name="time" class="form-control" style="display: inline;" id="time">
+                                        <option selected="selected" >2016年</option>
+                                        <option>2015年</option>
                                     </select>
-
-                                    <label>调查结束日期:</label>
-                                    <select name="time" class="form-control">
-                                        <option selected="selected" >调查期--全部</option>
-                                        <option>2016年1月</option>
-                                        <option>2016年2月</option>
-                                    </select>
-
-                                    <button type="submit" class="btn btn-default">查询</button>
                                 </form>
 
                             </div>
@@ -265,35 +256,36 @@
                             <!--图表绘制-->
                             <div id="comparative analysis" class="col-md-offset-1" style="height:600px;width: 800px;"></div>
                         </div>
-                        <h3 id="reply-title" class="comment-reply-title col-md-offset-1">
-                            <i class="fa fa-thumb-tack fa-3x" style="font-size:22px;"></i> 岗位变化数量汇总
-                        </h3>
 
-                        <div class="col-md-6 col-md-offset-3">
-                            <table class="table table-hover table-bordered">
-                                <thead>
-                                <tr>
-                                    <th>时期</th>
-                                    <th>岗位变化数</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <!--时期-->
-                                    <td>1月</td>
-                                    <!--岗位变化数-->
-                                    <td>100</td>
-                                </tr>
-                                <tr>
-                                    <!--时期-->
-                                    <td id="month">2月</td>
-                                    <!--岗位变化数-->
-                                    <td>100</td>
-                                </tr>
+                        <!--<h3 id="reply-title" class="comment-reply-title col-md-offset-1">-->
+                            <!--<i class="fa fa-thumb-tack fa-3x" style="font-size:22px;"></i> 岗位变化数量汇总-->
+                        <!--</h3>-->
 
-                                </tbody>
-                            </table>
-                        </div>
+                        <!--<div class="col-md-6 col-md-offset-3">-->
+                            <!--<table class="table table-hover table-bordered">-->
+                                <!--<thead>-->
+                                <!--<tr>-->
+                                    <!--<th>时期</th>-->
+                                    <!--<th>岗位变化数</th>-->
+                                <!--</tr>-->
+                                <!--</thead>-->
+                                <!--<tbody>-->
+                                <!--<tr>-->
+                                    <!--&lt;!&ndash;时期&ndash;&gt;-->
+                                    <!--<td>1月</td>-->
+                                    <!--&lt;!&ndash;岗位变化数&ndash;&gt;-->
+                                    <!--<td>100</td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--&lt;!&ndash;时期&ndash;&gt;-->
+                                    <!--<td id="month">2月</td>-->
+                                    <!--&lt;!&ndash;岗位变化数&ndash;&gt;-->
+                                    <!--<td>100</td>-->
+                                <!--</tr>-->
+
+                                <!--</tbody>-->
+                            <!--</table>-->
+                        <!--</div>-->
 
                         <!-- ////////////////////////////////////////////////////////// -->
                         <!-- ***************** -  主内容显示区 END  - ****************** -->
@@ -406,64 +398,9 @@
 
 
 <!-- ***************** - JavaScript Starts Here - ***************** -->
+
+<script type="text/javascript" src="analysis.js"></script>
 <script src="../../js/echarts.common.min.js"></script>
-<script type="text/javascript">
-    // 基于准备好的dom，初始化echarts图表
-    var myChart = echarts.init(document.getElementById('comparative analysis'));
-    option = {
-        title: {
-            text: '岗位变化数量分析'
-        },
-        tooltip : {
-            trigger: 'axis'
-        },
-        legend: {
-            data:['岗位变化数']
-        },
-        toolbox: {
-            feature: {
-                saveAsImage: {}
-            }
-        },
-        grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: true
-        },
-        xAxis : [
-            {
-                type : 'category',
-                boundaryGap : false,
-
-//               ----------变化月份-----------
-                data : ['1月','2月','3月','4月','5月','6月','7月']
-            }
-        ],
-        yAxis : [
-            {
-                type : 'value'
-            }
-        ],
-        series : [
-            {
-                name:'岗位变化数',
-                type:'line',
-                stack: '变化量',
-                areaStyle: {normal: {}},
-
-//                ----------变化数量-----------
-                data:[120, 132, 101, 134, 90, 230, 210]
-            }
-
-        ]
-    };
-
-
-
-    myChart.setOption(option);
-</script>
-
 <script type="text/javascript" src="../../js/custom-main.js"></script>
 <script type="text/javascript" src="../../js/superfish.js"></script>
 <script type="text/javascript" src="../../js/jquery.flexslider.js"></script>
