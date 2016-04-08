@@ -31,6 +31,8 @@ function getData(){
                 var json = JSON.parse(data.trim());
                 if (json.msg == "success") {
                     fillData(json.data);
+
+                    showData($("#time").val());
                 }
                 else {
                     console.log("error: "+data);
