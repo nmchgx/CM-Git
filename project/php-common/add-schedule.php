@@ -17,12 +17,33 @@ $year=$_POST['year'];
 $month=$_POST['month'];
 $start=$_POST['start'];
 $end=$_POST['end'];
-//INSERT INTO table_name (列1, 列2,...) VALUES (值1, 值2,....)
-$sql="INSERT INTO schedule (year,month,start,end) VALUES ('$year','$month','$start','$end')";
-$sqlResult=$mysql->query($sql);
-//echo $sql;
-if(!empty($sqlResult)) {
-    echo "{\"msg\": \"success\"}";
-}else{
+
+$sql_time = "SELECT * FROM schedule WHERE schedule.year = '$year'AND schedule.month = '$month' ";
+$sqlResult_time = $mysql -> query($sql_time);
+
+$data = null;
+
+if(!empty($sqlResult_time)){
+    foreach($sqlResult_time as $row=>$rowVal){
+        $data[$row] = $rowVal;
+    }
+
+    if (count($data)){
+        //INSERT INTO table_name (列1, 列2,...) VALUES (值1, 值2,....)
+        $sql="INSERT INTO schedule (year,month,start,end) VALUES ('$year','$month','$start','$end')";
+        $sqlResult=$mysql->query($sql);
+        //echo $sql;
+        if(!empty($sqlResult)) {
+            echo "{\"msg\": \"success\"}";
+        }else{
+            echo "{\"msg\": \"error2\"}";
+        }
+    }
+    else{
+        echo "{\"msg\": \"error3\"}";
+    }
+
+}
+else{
     echo "{\"msg\": \"error\"}";
 }
