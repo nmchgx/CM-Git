@@ -10,31 +10,38 @@ function addSchedule(){
     var start = $('input[name=start]').val();
     var end = $('input[name=end]').val();
 
-    $.ajax(
-        {
-            type: "POST",
-            url: "../../../php-common/add-schedule.php",
-            data: {
-                year: year,
-                month: month,
-                start: start,
-                end: end
-            },
-            success: function (data) {
-                console.log(data.trim());
-                if (data.trim() != "") {
-                    var json = JSON.parse(data.trim());
-                    if (json.msg == "success") {
-                        location.href = "../schedule/"
+    var start_time = new Date(start);
+    var end_time = new Date(end);
+
+    console.log(start_time.getMonth());
+
+    if (start_time.getTime() < end_time.getTime() && start_time.getFullYear() == year && end_time.getFullYear() == year && start_time.getMonth() == month && end_time.getMonth() == month) {
+        $.ajax(
+            {
+                type: "POST",
+                url: "../../../php-common/add-schedule.php",
+                data: {
+                    year: year,
+                    month: month,
+                    start: start,
+                    end: end
+                },
+                success: function (data) {
+                    console.log(data.trim());
+                    if (data.trim() != "") {
+                        var json = JSON.parse(data.trim());
+                        if (json.msg == "success") {
+                            location.href = "../schedule/"
+                        }
+                        else {
+                            console.log("error: "+data);
+                        }
                     }
-                    else {
-                        console.log("error: "+data);
-                    }
+                },
+                error: function (data) {
+                    console.log("error: "+data);
                 }
-            },
-            error: function (data) {
-                console.log("error: "+data);
             }
-        }
-    );
+        );
+    }
 }
